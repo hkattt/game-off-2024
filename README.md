@@ -1,6 +1,6 @@
 # Game Off 2024
 
-**TODO**: Update reposity name, description, and `.README.md` title.
+**TODO**: Update reposity name, description, and `README.md` title.
 
 ## Overview 
 This game was made using Godot 4 and GDScript for [GitHub Game Off 2024](https://itch.io/jam/game-off-2024). The theme of the game jam was was `SECRETS`.
