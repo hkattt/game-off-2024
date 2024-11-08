@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5dhq6hane33t"]
+
+[ext_resource type="PackedScene" uid="uid://dnx1woj07juxu" path="res://scenes/minigames/dinosaur/dinosaur.tscn" id="1_dhphp"]
+
+[node name="DinosaurMinigame" type="Node2D"]
+
+[node name="Dinosaur" parent="." instance=ExtResource("1_dhphp")]
