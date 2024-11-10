@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjkjku3my1nj6"]
+
+[ext_resource type="Texture2D" uid="uid://6uahum60g7ad" path="res://assets/icons.png" id="1_j3snk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wdlhi"]
+radius = 5.09902
+
+[node name="Rock" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_j3snk")
+region_enabled = true
+region_rect = Rect2(432, 312, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_wdlhi")
