@@ -5,7 +5,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_wdlhi"]
 radius = 5.09902
 
-[node name="Rock" type="RigidBody2D"]
+[node name="Rock" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
