@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_igdaw"]
 size = Vector2(10, 23)
 
-[node name="Dinosaur" type="CharacterBody2D"]
+[node name="Child" type="CharacterBody2D"]
 script = ExtResource("1_qylmg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

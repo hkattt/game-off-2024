@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5dhq6hane33t"]
+
+[ext_resource type="PackedScene" uid="uid://cnnjy81cpodn" path="res://scenes/minigames/child/ground.tscn" id="1_3i7y7"]
+[ext_resource type="PackedScene" uid="uid://dnx1woj07juxu" path="res://scenes/minigames/child/child.tscn" id="2_m6exf"]
+[ext_resource type="PackedScene" uid="uid://cjkjku3my1nj6" path="res://scenes/minigames/child/rock.tscn" id="3_6uo3g"]
+
+[node name="ChildMinigame" type="Node2D"]
+
+[node name="Ground" parent="." instance=ExtResource("1_3i7y7")]
+position = Vector2(1152, 48)
+
+[node name="Child" parent="." instance=ExtResource("2_m6exf")]
+z_index = 1
+position = Vector2(24, -16)
+
+[node name="Rock" parent="." instance=ExtResource("3_6uo3g")]
+position = Vector2(235, -19)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(160, -24)
