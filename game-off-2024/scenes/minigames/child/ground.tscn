@@ -1,9 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://cnnjy81cpodn"]
 
-[ext_resource type="Texture2D" uid="uid://dtvy32lqj6yrj" path="res://assets/ground.png" id="1_f1tlj"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2c2fk"]
 size = Vector2(2303, 96)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j0mtx"]
+load_path = "res://.godot/imported/ground.png-328d82a69941a655cdd4638d3455ed11.ctex"
 
 [node name="Ground" type="StaticBody2D"]
 
@@ -12,4 +13,4 @@ position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_2c2fk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_f1tlj")
+texture = SubResource("CompressedTexture2D_j0mtx")

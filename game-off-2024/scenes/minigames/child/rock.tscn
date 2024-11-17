@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cjkjku3my1nj6"]
 
-[ext_resource type="Script" path="res://scripts/rock.gd" id="1_d4w4v"]
+[ext_resource type="Script" path="res://scripts/minigames/child/rock.gd" id="1_d4w4v"]
 [ext_resource type="Texture2D" uid="uid://6uahum60g7ad" path="res://assets/icons.png" id="1_j3snk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wdlhi"]

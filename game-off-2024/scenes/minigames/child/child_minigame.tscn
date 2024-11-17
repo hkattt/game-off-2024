@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c5dhq6hane33t"]
 
-[ext_resource type="Script" path="res://scripts/child_minigame.gd" id="1_oa7m1"]
+[ext_resource type="Script" path="res://scripts/minigames/child/child_minigame.gd" id="1_oa7m1"]
 [ext_resource type="PackedScene" uid="uid://dnx1woj07juxu" path="res://scenes/minigames/child/player.tscn" id="2_m6exf"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_r17oc"]
