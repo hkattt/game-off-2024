@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://icur8t27smy"]
 
-[ext_resource type="PackedScene" uid="uid://c5dhq6hane33t" path="res://scenes/minigames/child/child_minigame.tscn" id="1_mw1v1"]
-[ext_resource type="Texture2D" uid="uid://dekotuv2ccpvr" path="res://assets/minigrams/child/child.png" id="2_tbfde"]
+[ext_resource type="PackedScene" uid="uid://c5dhq6hane33t" path="res://scenes/minigames/child/child_minigame.tscn" id="1_8h51y"]
+[ext_resource type="Texture2D" uid="uid://dekotuv2ccpvr" path="res://assets/minigrams/child/child.png" id="2_s2l07"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jse2k"]
 bg_color = Color(1, 1, 1, 1)
 border_color = Color(1, 1, 1, 1)
 
-[node name="Main" type="Node2D"]
+[node name="ChildInterview" type="Node2D"]
 
 [node name="MinigamePanel" type="Panel" parent="."]
 offset_left = 10.0
@@ -32,9 +32,9 @@ handle_input_locally = false
 size = Vector2i(296, 96)
 render_target_update_mode = 4
 
-[node name="ChildMinigame" parent="MinigamePanel/SubViewportContainer/SubViewport" instance=ExtResource("1_mw1v1")]
+[node name="ChildMinigame" parent="MinigamePanel/SubViewportContainer/SubViewport" instance=ExtResource("1_8h51y")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 3
 position = Vector2(73, 63)
-texture = ExtResource("2_tbfde")
+texture = ExtResource("2_s2l07")
