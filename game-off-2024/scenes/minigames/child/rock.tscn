@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjkjku3my1nj6"]
+
+[ext_resource type="Script" path="res://scripts/minigames/child/rock.gd" id="1_d4w4v"]
+[ext_resource type="Texture2D" uid="uid://dmxo8em7p5fr1" path="res://assets/minigrams/child/triangle.png" id="2_hrjkt"]
+
+[node name="Rock" type="Area2D"]
+script = ExtResource("1_d4w4v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_hrjkt")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 2)
+polygon = PackedVector2Array(0, -10, 8, 6, -8, 6)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
