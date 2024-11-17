@@ -1,20 +1,26 @@
 [gd_scene load_steps=4 format=3 uid="uid://c5dhq6hane33t"]
 
-[ext_resource type="PackedScene" uid="uid://cnnjy81cpodn" path="res://scenes/minigames/child/ground.tscn" id="1_3i7y7"]
-[ext_resource type="PackedScene" uid="uid://dnx1woj07juxu" path="res://scenes/minigames/child/child.tscn" id="2_m6exf"]
-[ext_resource type="PackedScene" uid="uid://cjkjku3my1nj6" path="res://scenes/minigames/child/rock.tscn" id="3_6uo3g"]
+[ext_resource type="Script" path="res://scripts/child_minigame.gd" id="1_oa7m1"]
+[ext_resource type="PackedScene" uid="uid://dnx1woj07juxu" path="res://scenes/minigames/child/player.tscn" id="2_m6exf"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_r17oc"]
+b = Vector2(320, 0)
 
 [node name="ChildMinigame" type="Node2D"]
+script = ExtResource("1_oa7m1")
 
-[node name="Ground" parent="." instance=ExtResource("1_3i7y7")]
-position = Vector2(1152, 48)
+[node name="Window" type="ColorRect" parent="."]
+visible = false
+offset_right = 296.0
+offset_bottom = 96.0
 
-[node name="Child" parent="." instance=ExtResource("2_m6exf")]
+[node name="Player" parent="." instance=ExtResource("2_m6exf")]
 z_index = 1
-position = Vector2(24, -16)
+position = Vector2(8, 80)
 
-[node name="Rock" parent="." instance=ExtResource("3_6uo3g")]
-position = Vector2(235, -19)
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(160, -24)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 96)
+shape = SubResource("SegmentShape2D_r17oc")
+debug_color = Color(0.868697, 0.217806, 0.689677, 0.42)
