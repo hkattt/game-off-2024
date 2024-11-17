@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var obstacle_scene = preload("res://scenes/minigames/child/rock.tscn")
+@onready var obstacle_scene: PackedScene = preload("res://scenes/minigames/child/rock.tscn")
 
 # Time range for random spawning
 const SPAWN_TIME_MIN: float = 1.0
@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 		spawn_timer = randf_range(SPAWN_TIME_MIN, SPAWN_TIME_MAX)
 		
 func spawn_obstacle():
-	var obstacle = obstacle_scene.instantiate()
+	var obstacle: Area2D = obstacle_scene.instantiate()
 	
 	obstacle.position = Vector2(350, 90)
 	

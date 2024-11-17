@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvqvuyleluryw"
-path="res://.godot/imported/dinosaur.png-393df71a365a33ae927249ab9c560f3c.ctex"
+uid="uid://dmxo8em7p5fr1"
+path="res://.godot/imported/triangle.png-21fcd99c600099495ffc06d803e36a99.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dinosaur.png"
-dest_files=["res://.godot/imported/dinosaur.png-393df71a365a33ae927249ab9c560f3c.ctex"]
+source_file="res://assets/minigrams/child/triangle.png"
+dest_files=["res://.godot/imported/triangle.png-21fcd99c600099495ffc06d803e36a99.ctex"]
 
 [params]
 
