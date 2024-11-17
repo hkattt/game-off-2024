@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvqvuyleluryw"
-path="res://.godot/imported/dinosaur.png-235fcea3c352f503112db96446bcf817.ctex"
+uid="uid://dekotuv2ccpvr"
+path="res://.godot/imported/child.png-d4b66171c3b5c462cb624772b38f5abb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/minigrams/child/dinosaur.png"
-dest_files=["res://.godot/imported/dinosaur.png-235fcea3c352f503112db96446bcf817.ctex"]
+source_file="res://assets/minigrams/child/child.png"
+dest_files=["res://.godot/imported/child.png-d4b66171c3b5c462cb624772b38f5abb.ctex"]
 
 [params]
 
