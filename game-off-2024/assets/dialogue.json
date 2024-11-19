@@ -1,0 +1,49 @@
+{
+    "dialogues": [
+        {
+            "character": "Child",
+            "lines": [
+                "Opening line",
+                "First game line",
+                "Second game line",
+                "Third game line"
+            ]
+        },
+        {
+            "character": "Chef",
+            "lines": [
+                "Opening line",
+                "First game line",
+                "Second game line",
+                "Third game line"
+            ]
+        },
+        {
+            "character": "Scientist",
+            "lines": [
+                "Opening line",
+                "First game line",
+                "Second game line",
+                "Third game line"
+            ]
+        },
+        {
+            "character": "Doctor",
+            "lines": [
+                "Opening line",
+                "First game line",
+                "Second game line",
+                "Third game line"
+            ]
+        },
+        {
+            "character": "Artist",
+            "lines": [
+                "Opening line",
+                "First game line",
+                "Second game line",
+                "Third game line"
+            ]
+        }
+    ]
+}
