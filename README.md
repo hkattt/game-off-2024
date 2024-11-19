@@ -16,7 +16,7 @@ This game was made using Godot 4 and GDScript for [GitHub Game Off 2024](https:/
 **TODO**: Explain how to setup the project.
 
 ## Asset References
-1. Font: https://www.pentacom.jp/pentacom/bitfontmaker2/gallery/?id=383 
+1. Font: https://www.pentacom.jp/pentacom/bitfontmaker2/gallery/?id=381
 
 
 ## Code References

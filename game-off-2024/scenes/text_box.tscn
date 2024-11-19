@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dxuo3kk60cdkk"]
 
-[ext_resource type="FontFile" uid="uid://b84hrkkvf28f4" path="res://assets/font/Born2bSportyV2.ttf" id="1_3nlal"]
 [ext_resource type="Script" path="res://scripts/text_box.gd" id="1_t46qd"]
+[ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="2_s0dyb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylnh1"]
 bg_color = Color(0, 0, 0, 1)
@@ -19,8 +19,16 @@ corner_radius_bottom_left = 5
 script = ExtResource("1_t46qd")
 
 [node name="TextBoxContainer" type="MarginContainer" parent="."]
-offset_right = 160.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -160.0
 offset_bottom = 128.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 20
 
 [node name="Panel" type="Panel" parent="TextBoxContainer"]
 layout_mode = 2
@@ -40,7 +48,8 @@ layout_mode = 2
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("1_3nlal")
+theme_override_fonts/font = ExtResource("2_s0dyb")
+theme_override_font_sizes/font_size = 16
 text = "*"
 
 [node name="Text" type="Label" parent="TextBoxContainer/MarginContainer/HBoxContainer"]
@@ -50,7 +59,8 @@ custom_minimum_size = Vector2(8, 8)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-theme_override_fonts/font = ExtResource("1_3nlal")
-text = "Text "
+theme_override_fonts/font = ExtResource("2_s0dyb")
+theme_override_font_sizes/font_size = 16
+text = "Character dialogue "
 autowrap_mode = 3
 clip_text = true
