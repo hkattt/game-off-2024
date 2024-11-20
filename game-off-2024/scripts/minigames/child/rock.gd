@@ -11,4 +11,5 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body):
 	if body is CharacterBody2D:
-		print("Collision")
+		body.kill()
+		queue_free()
