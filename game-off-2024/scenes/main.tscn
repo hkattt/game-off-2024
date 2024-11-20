@@ -1,40 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://buy30u0ncpxfq"]
+[gd_scene load_steps=2 format=3 uid="uid://buy30u0ncpxfq"]
 
-[ext_resource type="PackedScene" uid="uid://c5dhq6hane33t" path="res://scenes/minigames/child/child_minigame.tscn" id="1_mw1v1"]
-[ext_resource type="Texture2D" uid="uid://dekotuv2ccpvr" path="res://assets/minigrams/child/child.png" id="2_tbfde"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jse2k"]
-bg_color = Color(1, 1, 1, 1)
-border_color = Color(1, 1, 1, 1)
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_8qglp"]
 
 [node name="Main" type="Node2D"]
-
-[node name="MinigamePanel" type="Panel" parent="."]
-offset_left = 10.0
-offset_top = 130.0
-offset_right = 310.0
-offset_bottom = 230.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_jse2k")
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="MinigamePanel"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -148.0
-offset_top = 2.0
-offset_right = 148.0
-offset_bottom = 98.0
-grow_horizontal = 2
-
-[node name="SubViewport" type="SubViewport" parent="MinigamePanel/SubViewportContainer"]
-handle_input_locally = false
-size = Vector2i(296, 96)
-render_target_update_mode = 4
-
-[node name="ChildMinigame" parent="MinigamePanel/SubViewportContainer/SubViewport" instance=ExtResource("1_mw1v1")]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 3
-position = Vector2(73, 63)
-texture = ExtResource("2_tbfde")
+script = ExtResource("1_8qglp")

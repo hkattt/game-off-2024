@@ -5,19 +5,14 @@ extends Node2D
 @onready var minigame_viewport: SubViewport = $MinigamePanel/SubViewportContainer/SubViewport
 
 # Character index (i.e. Child, Chef, Scientist, Doctor, Artist)
-var character_index: int           = 0
+var character_index: int = 0
 # Character dialogue index 
 var dialogue_index: int  = 0
 # Character dialogues
-var dialogues: Array      = []
+var dialogues: Array     = []
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	# Set the character
-	set_character("res://scenes/minigames/child/child.tscn")
-	# Set the minigame 
-	set_minigame("res://scenes/minigames/child/child_minigame.tscn")
-	
+func _ready() -> void:	
 	dialogues = dialogue_manager.dialogues[character_index]["lines"]
 	text_box.set_text(dialogues[dialogue_index])
 
@@ -53,6 +48,8 @@ func set_minigame(minigame_scene_path: String):
 	if minigame_scene:
 		# Create an instance of the minigame scene
 		var minigame: Node2D = minigame_scene.instantiate()
+		
+		print(minigame_viewport)
 		# Rename the node
 		minigame.name = "Minigame"
 		# Add the minigame node as a child node of the minigame viewport
