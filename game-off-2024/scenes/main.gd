@@ -41,6 +41,15 @@ func character_to_string(character: Character) -> String:
 		Character.Doctor:    return "doctor" 
 		Character.Artist:    return "artist"
 		_:                   return ""
+		
+func character_to_index(character: Character) -> int:
+	match character:
+		Character.Child:     return 0
+		Character.Chef:      return 1
+		Character.Scientist: return 2
+		Character.Doctor:    return 3
+		Character.Artist:    return 4
+		_:                   return -1
 	
 func character_scene_path(character: Character) -> String:
 	var character_string: String = character_to_string(character)
