@@ -48,8 +48,6 @@ func set_minigame(minigame_scene_path: String):
 	if minigame_scene:
 		# Create an instance of the minigame scene
 		var minigame: Node2D = minigame_scene.instantiate()
-		
-		print(minigame_viewport)
 		# Rename the node
 		minigame.name = "Minigame"
 		# Add the minigame node as a child node of the minigame viewport
