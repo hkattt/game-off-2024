@@ -1,5 +1,10 @@
 extends Node
 
+# Character index (i.e. Child, Chef, Scientist, Doctor, Artist)
+var character_index: int = 0
+# Character dialogue index 
+var dialogue_index: int  = 0
+# Character dialogues
 var dialogues: Array = []
 
 # Called when the node enters the scene tree for the first time.
@@ -13,3 +18,13 @@ func load_dialogues(file_path: String) -> void:
 		dialogues = json_as_dict["dialogues"]
 	else:
 		print("File does not exist")
+		
+func next_character() -> void:
+	character_index += 1
+	
+func next_line() -> void:
+	dialogue_index += 1
+	
+func get_line() -> String:
+	var character_lines = dialogues[character_index]["lines"]
+	return character_lines[dialogue_index]

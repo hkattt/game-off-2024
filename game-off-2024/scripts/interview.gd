@@ -4,17 +4,15 @@ extends Node2D
 @onready var text_box: CanvasLayer          = $TextBox
 @onready var minigame_viewport: SubViewport = $MinigamePanel/SubViewportContainer/SubViewport
 
-# Character index (i.e. Child, Chef, Scientist, Doctor, Artist)
-var character_index: int = 0
-# Character dialogue index 
-var dialogue_index: int  = 0
-# Character dialogues
-var dialogues: Array     = []
+const Minigame = preload("res://scripts/minigames/minigame.gd")
+
+var character_scene: PackedScene
+var minigame_scene: PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
-	dialogues = dialogue_manager.dialogues[character_index]["lines"]
-	text_box.set_text(dialogues[dialogue_index])
+	text_box.set_text(dialogue_manager.get_line())
+	dialogue_manager.next_line()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -23,8 +21,10 @@ func _process(delta: float) -> void:
 		var minigame: Node2D = minigame_viewport.get_node("Minigame")
 		# Check if the minigame ended
 		if minigame.is_game_over():
-			minigame.queue_free()
-
+			# TODO: We are setting the difficulty. But how do I make it actually use it?
+			# I need to make the minigame restart with the new difficulty
+			minigame.next_difficulty()
+			
 func set_character(character_scene_path: String):
 	# Load the character scene
 	var character_scene: PackedScene = load(character_scene_path) as PackedScene
