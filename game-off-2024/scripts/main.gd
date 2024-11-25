@@ -24,10 +24,9 @@ func _ready() -> void:
 	# Create an instance of the inverview scene
 	var interview = interview_scene.instantiate()
 	
-	add_child(interview)
-	
 	interview.set_character(character_scene_path)
 	interview.set_minigame(character_minigame_scene_path)
+	add_child(interview)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

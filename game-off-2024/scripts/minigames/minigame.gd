@@ -8,35 +8,43 @@ enum GameState {
 	LOST
 }
 
-enum Difficulty {
+enum Level {
 	EASY, 
 	MEDIUM,
-	HARD
+	HARD,
+	COMPLETE
 }
 
 var game_state: GameState = GameState.NOT_PLAYING
-var difficulty: Difficulty
+var level: Level
 
-func start_game():
+func start_game() -> void:
 	game_state = GameState.PLAYING
 	
-func lose_game():
+func lose_game() -> void:
 	game_state = GameState.LOST
 	
-func won_game():
+func won_game() -> void:
 	game_state = GameState.WON
+
+func reset_game() -> void:
+	pass
 	
 func is_game_over() -> bool:
 	return game_state == GameState.WON or game_state == GameState.LOST
-
-func set_difficulty(difficulty: Difficulty):
-	difficulty = difficulty
 	
-func next_difficulty():
-	match difficulty:
-		Difficulty.EASY:
-			return Difficulty.MEDIUM
-		Difficulty.MEDIUM:
-			return Difficulty.HARD
-		Difficulty.HARD:
-			return Difficulty.EASY
+func set_level(new_level) -> void:
+	level = new_level
+	
+static func next_level(current_level: Level) -> Level:
+	match current_level:
+		Level.EASY:
+			return Level.MEDIUM
+		Level.MEDIUM:
+			return Level.HARD
+		Level.HARD:
+			return Level.COMPLETE
+		Level.COMPLETE:
+			return Level.COMPLETE
+		_:
+			return Level.COMPLETE

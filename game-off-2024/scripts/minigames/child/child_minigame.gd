@@ -10,8 +10,6 @@ var spawn_time_min: float
 var spawn_time_max: float
 # Current timer
 var spawn_timer: float = 0.0
-# Game difficulty
-var current_difficulty: Difficulty
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -37,13 +35,15 @@ func spawn_obstacle():
 	add_child(obstacle)
 			
 func set_spawn_rates() -> void:
-	match current_difficulty:
-		Difficulty.EASY:
+	match level:
+		Level.EASY:
 			spawn_time_min = 2.0
 			spawn_time_max = 4.0
-		Difficulty.MEDIUM:
-			spawn_time_min = 0.0
-			spawn_time_max = 0.25
-		Difficulty.HARD:
-			spawn_time_min = 0.0
-			spawn_time_max = 0.25
+		Level.MEDIUM:
+			spawn_time_min = 1.0
+			spawn_time_max = 2.0
+		Level.HARD:
+			spawn_time_min = 0.5
+			spawn_time_max = 1.0
+		_:
+			pass
