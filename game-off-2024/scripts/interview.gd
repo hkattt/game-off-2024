@@ -22,9 +22,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	# Check if the viewport currently has a child
 	if minigame_viewport.has_node("Minigame"):
-		var minigame: Node2D = minigame_viewport.get_node("Minigame")
-		
-		print("Minigame state:", minigame.game_state)
+		var minigame: Node2D = minigame_viewport.get_node("Minigame")		
 		# Check if the minigame ended
 		if minigame.is_game_over():
 			# Delete the previous minigame
@@ -33,6 +31,9 @@ func _process(delta: float) -> void:
 			level = Minigame.next_level(level)
 			# Instantiate the next level
 			instantiate_minigame(level)
+			# Play the next dialogue
+			text_box.set_text(dialogue_manager.get_line())
+			dialogue_manager.next_line()
 				
 func set_character(character_scene_path: String):
 	# Load the character scene
@@ -66,7 +67,5 @@ func instantiate_minigame(level: Minigame.Level):
 	# Set the level
 	minigame.set_level(level)
 	# Add the minigame node as a child node of the minigame viewport
-	print("Minigame Viewport", minigame_viewport.get_children())
 	minigame_viewport.add_child(minigame)
-	print("Minigame Viewport", minigame_viewport.get_children())
 	minigame.start_game()
