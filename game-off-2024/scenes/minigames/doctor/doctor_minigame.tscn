@@ -1,26 +1,67 @@
-[gd_scene load_steps=4 format=3 uid="uid://ck5id71nprqt3"]
+[gd_scene load_steps=3 format=3 uid="uid://ck5id71nprqt3"]
 
-[ext_resource type="Script" path="res://scripts/minigames/child/child_minigame.gd" id="1_cbitj"]
-[ext_resource type="PackedScene" uid="uid://dnx1woj07juxu" path="res://scenes/minigames/child/player.tscn" id="2_twi6m"]
+[ext_resource type="Script" path="res://scripts/minigames/doctor/doctor_minigame.gd" id="1_2q7ea"]
+[ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="2_7bcpl"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_r17oc"]
-b = Vector2(320, 0)
-
-[node name="ChildMinigame" type="Node2D"]
-script = ExtResource("1_cbitj")
+[node name="DoctorMinigame" type="Node2D"]
+script = ExtResource("1_2q7ea")
 
 [node name="Window" type="ColorRect" parent="."]
 visible = false
 offset_right = 296.0
 offset_bottom = 96.0
 
-[node name="Player" parent="." instance=ExtResource("2_twi6m")]
-z_index = 1
-position = Vector2(8, 80)
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="SymptomHBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 96)
-shape = SubResource("SegmentShape2D_r17oc")
-debug_color = Color(0.868697, 0.217806, 0.689677, 0.42)
+[node name="Symptom 1" type="Label" parent="VBoxContainer/SymptomHBoxContainer"]
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_fonts/font = ExtResource("2_7bcpl")
+text = "Symptom 1"
+
+[node name="Symptom 2" type="Label" parent="VBoxContainer/SymptomHBoxContainer"]
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_fonts/font = ExtResource("2_7bcpl")
+text = "Symptom 2"
+
+[node name="Symptom 3" type="Label" parent="VBoxContainer/SymptomHBoxContainer"]
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_fonts/font = ExtResource("2_7bcpl")
+text = "Symptom 3"
+
+[node name="DiagnosisHBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Diagnosis 1" type="Button" parent="VBoxContainer/DiagnosisHBoxContainer"]
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_fonts/font = ExtResource("2_7bcpl")
+text = "Diagnosis 1
+"
+
+[node name="Diagnosis 2" type="Button" parent="VBoxContainer/DiagnosisHBoxContainer"]
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_fonts/font = ExtResource("2_7bcpl")
+text = "Diagnosis 2
+"
+
+[node name="Diagnosis 3" type="Button" parent="VBoxContainer/DiagnosisHBoxContainer"]
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_fonts/font = ExtResource("2_7bcpl")
+text = "Diagnosis 3
+"

@@ -11,7 +11,7 @@ enum Character {
 @onready var interview_scene: PackedScene = preload("res://scenes/interview.tscn")
 @onready var dialogue_manager: Node2D = $DialogueManager
 
-var character: Character = Character.CHILD
+var character: Character = Character.DOCTOR
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
