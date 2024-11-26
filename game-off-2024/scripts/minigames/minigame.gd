@@ -30,8 +30,14 @@ func won_game() -> void:
 func reset_game() -> void:
 	pass
 	
-func is_game_over() -> bool:
-	return game_state == GameState.WON or game_state == GameState.LOST
+func is_won() -> bool:
+	return game_state == GameState.WON
+
+func is_lost() -> bool:
+	return game_state == GameState.LOST
+	
+func is_over() -> bool:
+	return is_won() or is_lost()
 	
 func set_level(new_level) -> void:
 	level = new_level

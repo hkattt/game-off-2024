@@ -10,7 +10,7 @@ extends "res://scripts/minigames/minigame.gd"
 # Time range for random spawning
 var spawn_time_min: float
 var spawn_time_max: float
-# Current timer
+# Current timer for the obstacle spawn and finish line spawn
 var spawn_timer: float = 0.0
 var win_timer: float = 20.0
 
@@ -45,7 +45,7 @@ func set_spawn_rates() -> void:
 			spawn_time_min = 2.0
 			spawn_time_max = 4.0
 		Level.MEDIUM:
-			spawn_time_min = 1.0
+			spawn_time_min = 0.5
 			spawn_time_max = 2.0
 		Level.HARD:
 			spawn_time_min = 0.5

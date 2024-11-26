@@ -3,7 +3,8 @@ extends Node
 # Character index (i.e. Child, Chef, Scientist, Doctor, Artist)
 var character_index: int = 0
 # Character dialogue index 
-var dialogue_index: int  = 0
+var positive_dialogue_index: int = 0
+var negative_dialogue_index: int = 0
 # Character dialogues
 var dialogues: Array = []
 
@@ -21,10 +22,23 @@ func load_dialogues(file_path: String) -> void:
 		
 func next_character() -> void:
 	character_index += 1
+	positive_dialogue_index = 0
+	negative_dialogue_index = 0
 	
-func next_line() -> void:
-	dialogue_index += 1
+func next_positive_line() -> void:
+	positive_dialogue_index += 1
 	
-func get_line() -> String:
-	var character_lines = dialogues[character_index]["lines"]
-	return character_lines[dialogue_index]
+func next_negative_line() -> void:
+	negative_dialogue_index += 1
+	
+func get_opening_line() -> String:
+	return dialogues[character_index]["opening"]
+
+func get_closing_line() -> String:
+	return dialogues[character_index]["closing"]
+	
+func get_positive_line() -> String:
+	return dialogues[character_index]["positive"][positive_dialogue_index]
+	
+func get_negative_line() -> String:
+	return dialogues[character_index]["negative"][negative_dialogue_index]

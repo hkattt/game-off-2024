@@ -1,6 +1,9 @@
 extends Node2D
 
-@onready var dialogue_manager: Node         = $DialogueManager
+enum InterviewState {
+	RUNNING,
+	COMPLETE
+}
 @onready var text_box: CanvasLayer          = $TextBox
 @onready var minigame_viewport: SubViewport = $MinigamePanel/SubViewportContainer/SubViewport
 
@@ -9,12 +12,15 @@ const Minigame = preload("res://scripts/minigames/minigame.gd")
 var character_scene: PackedScene
 var minigame_scene: PackedScene
 
+var dialogue_manager: Node2D
+
+var interview_state: InterviewState = InterviewState.RUNNING
 var level: Minigame.Level = Minigame.Level.EASY
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
-	text_box.set_text(dialogue_manager.get_line())
-	dialogue_manager.next_line()
+	dialogue_manager = get_parent().get_node("DialogueManager")
+	text_box.set_text(dialogue_manager.get_opening_line())
 	instantiate_character()
 	instantiate_minigame(level)
 
@@ -23,17 +29,32 @@ func _process(delta: float) -> void:
 	# Check if the viewport currently has a child
 	if minigame_viewport.has_node("Minigame"):
 		var minigame: Node2D = minigame_viewport.get_node("Minigame")		
-		# Check if the minigame ended
-		if minigame.is_game_over():
+		
+		# Check if the game ended
+		if minigame.is_over():
+			# Check if the player won the game
+			if minigame.is_won():
+				text_box.set_text(dialogue_manager.get_positive_line())
+				dialogue_manager.next_positive_line()
+			# Check if the player lost the game
+			elif minigame.is_lost():
+				text_box.set_text(dialogue_manager.get_negative_line())
+				dialogue_manager.next_negative_line()
+				
 			# Delete the previous minigame
 			minigame.free()
 			# Move to the next level
 			level = Minigame.next_level(level)
-			# Instantiate the next level
-			instantiate_minigame(level)
-			# Play the next dialogue
-			text_box.set_text(dialogue_manager.get_line())
-			dialogue_manager.next_line()
+			# Check if all the levels have been played
+			if level == Minigame.Level.COMPLETE:
+				# Sleep for 5 seconds
+				await get_tree().create_timer(5).timeout
+				# TODO: Show the opening line?
+				# text_box.set_text(dialogue_manager.get_closing_line())
+				interview_state = InterviewState.COMPLETE 
+			else:	
+				# Instantiate the next level
+				instantiate_minigame(level)		
 				
 func set_character(character_scene_path: String):
 	# Load the character scene
@@ -69,3 +90,6 @@ func instantiate_minigame(level: Minigame.Level):
 	# Add the minigame node as a child node of the minigame viewport
 	minigame_viewport.add_child(minigame)
 	minigame.start_game()
+	
+func is_over() -> bool:
+	return interview_state == InterviewState.COMPLETE
