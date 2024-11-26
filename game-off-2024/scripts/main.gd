@@ -1,54 +1,63 @@
 extends Node2D
 
 enum Character {
-	Child,
-	Chef,
-	Scientist,
-	Doctor,
-	Artist
+	CHILD,
+	CHEF,
+	SCIENTIST,
+	DOCTOR,
+	ARTIST
 }
 
 @onready var interview_scene: PackedScene = preload("res://scenes/interview.tscn")
+@onready var dialogue_manager: Node2D = $DialogueManager
 
-var character: Character = Character.Child
+var character: Character = Character.CHILD
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _ready() -> void:	
+	instantiate_interview(character)
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if has_node("Interview"):
+		var interview: Node2D = get_node("Interview")
+		
+		if interview.is_over():
+			interview.free()
+			dialogue_manager.next_character()
+			# TODO: character = next_character(character)
+			instantiate_interview(character)
+
+func instantiate_interview(character: Character):
 	# Path to character scene and minigame scene
 	var character_scene_path: String = character_scene_path(character)
 	var character_minigame_scene_path: String  = character_minigame_scene_path(character)
 	
-	print(character_scene_path)
-	print(character_minigame_scene_path)
-	
-	# Create an instance of the inverview scene
-	var interview = interview_scene.instantiate()
-	
-	add_child(interview)
+	# Create an instance of the minigame scene
+	var interview: Node2D = interview_scene.instantiate()
+	# Rename the node
+	interview.name = "Interview"
 	
 	interview.set_character(character_scene_path)
 	interview.set_minigame(character_minigame_scene_path)
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	add_child(interview)
 
 func character_to_string(character: Character) -> String:
 	match character:
-		Character.Child:     return "child"
-		Character.Chef:      return "chef"
-		Character.Scientist: return "scientist"
-		Character.Doctor:    return "doctor" 
-		Character.Artist:    return "artist"
+		Character.CHILD:     return "child"
+		Character.CHEF:      return "chef"
+		Character.SCIENTIST: return "scientist"
+		Character.DOCTOR:    return "doctor" 
+		Character.ARTIST:    return "artist"
 		_:                   return ""
 		
 func character_to_index(character: Character) -> int:
 	match character:
-		Character.Child:     return 0
-		Character.Chef:      return 1
-		Character.Scientist: return 2
-		Character.Doctor:    return 3
-		Character.Artist:    return 4
+		Character.CHILD:     return 0
+		Character.CHEF:      return 1
+		Character.SCIENTIST: return 2
+		Character.DOCTOR:    return 3
+		Character.ARTIST:    return 4
 		_:                   return -1
 	
 func character_scene_path(character: Character) -> String:

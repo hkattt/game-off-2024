@@ -2,48 +2,78 @@
     "dialogues": [
         {
             "character": "Child",
-            "lines": [
-                "Opening line",
-                "First game line",
-                "Second game line",
-                "Third game line"
-            ]
+            "opening": "Opening Line",
+            "positive": [
+                "First positive game line",
+                "Second positive game line",
+                "Third positive game line"
+            ],
+            "negative": [
+                "First negative game line",
+                "Second negative game line",
+                "Third negative game line"
+            ],
+            "closing": "Closing line"
         },
         {
             "character": "Chef",
-            "lines": [
-                "Opening line",
-                "First game line",
-                "Second game line",
-                "Third game line"
-            ]
-        },
-        {
-            "character": "Scientist",
-            "lines": [
-                "Opening line",
-                "First game line",
-                "Second game line",
-                "Third game line"
-            ]
+            "opening": "Opening Line",
+            "positive": [
+                "First positive game line",
+                "Second positive game line",
+                "Third positive game line"
+            ],
+            "negative": [
+                "First negative game line",
+                "Second negative game line",
+                "Third negative game line"
+            ],
+            "closing": "Closing line"
         },
         {
             "character": "Doctor",
-            "lines": [
-                "Opening line",
-                "First game line",
-                "Second game line",
-                "Third game line"
-            ]
+            "opening": "Opening Line",
+            "positive": [
+                "First positive game line",
+                "Second positive game line",
+                "Third positive game line"
+            ],
+            "negative": [
+                "First negative game line",
+                "Second negative game line",
+                "Third negative game line"
+            ],
+            "closing": "Closing line"
         },
         {
             "character": "Artist",
-            "lines": [
-                "Opening line",
-                "First game line",
-                "Second game line",
-                "Third game line"
-            ]
+            "opening": "Opening Line",
+            "positive": [
+                "First positive game line",
+                "Second positive game line",
+                "Third positive game line"
+            ],
+            "negative": [
+                "First negative game line",
+                "Second negative game line",
+                "Third negative game line"
+            ],
+            "closing": "Closing line"
+        },
+        {
+            "character": "Scientist",
+            "opening": "Opening Line",
+            "positive": [
+                "First positive game line",
+                "Second positive game line",
+                "Third positive game line"
+            ],
+            "negative": [
+                "First negative game line",
+                "Second negative game line",
+                "Third negative game line"
+            ],
+            "closing": "Closing line"
         }
     ]
 }
