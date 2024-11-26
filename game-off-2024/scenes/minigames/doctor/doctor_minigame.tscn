@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://ck5id71nprqt3"]
+
+[ext_resource type="Script" path="res://scripts/minigames/child/child_minigame.gd" id="1_cbitj"]
+[ext_resource type="PackedScene" uid="uid://dnx1woj07juxu" path="res://scenes/minigames/child/player.tscn" id="2_twi6m"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_r17oc"]
+b = Vector2(320, 0)
+
+[node name="ChildMinigame" type="Node2D"]
+script = ExtResource("1_cbitj")
+
+[node name="Window" type="ColorRect" parent="."]
+visible = false
+offset_right = 296.0
+offset_bottom = 96.0
+
+[node name="Player" parent="." instance=ExtResource("2_twi6m")]
+z_index = 1
+position = Vector2(8, 80)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 96)
+shape = SubResource("SegmentShape2D_r17oc")
+debug_color = Color(0.868697, 0.217806, 0.689677, 0.42)
