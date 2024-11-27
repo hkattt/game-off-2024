@@ -26,7 +26,7 @@ func _process(delta: float) -> void:
 	win_timer -= delta
 	
 	# If the spawn timer runs out, spawn an obstacle 
-	if spawn_timer <= 0:
+	if spawn_timer <= 0 && win_timer != INF:
 		spawn_object(obstacle_scene, Vector2(300, 90))
 		spawn_timer = randf_range(spawn_time_min, spawn_time_max)
 	# If the win timer runs out, spawn a finish line

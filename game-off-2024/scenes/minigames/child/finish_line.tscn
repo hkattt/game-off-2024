@@ -1,18 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://bkuawgwjjdb8y"]
+[gd_scene load_steps=4 format=3 uid="uid://bkuawgwjjdb8y"]
 
 [ext_resource type="Script" path="res://scripts/minigames/child/finish_line.gd" id="1_m2oud"]
+[ext_resource type="Texture2D" uid="uid://dxp5affguwae1" path="res://assets/minigames/child/finishline.png" id="2_hwt8g"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_bl41h"]
-b = Vector2(0, 200)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yd5gx"]
+size = Vector2(3, 100)
 
 [node name="FinishLine" type="Area2D"]
 script = ExtResource("1_m2oud")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 2.0
-offset_bottom = 200.0
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(0, 50)
+texture = ExtResource("2_hwt8g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("SegmentShape2D_bl41h")
+position = Vector2(0.5, 50)
+shape = SubResource("RectangleShape2D_yd5gx")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
