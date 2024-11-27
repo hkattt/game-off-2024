@@ -16,7 +16,7 @@
             "closing": "Closing line"
         },
         {
-            "character": "Chef",
+            "character": "Doctor",
             "opening": "Opening Line",
             "positive": [
                 "First positive game line",
@@ -31,7 +31,7 @@
             "closing": "Closing line"
         },
         {
-            "character": "Doctor",
+            "character": "Chef",
             "opening": "Opening Line",
             "positive": [
                 "First positive game line",

@@ -1,0 +1,43 @@
+{
+    "challenges": [
+        {
+            "symptoms": [
+                "Fever",
+                "Cough",
+                "Sore Throat"
+            ],
+            "diagnoses": [
+                "Chickenpox",
+                "Flu",
+                "Migraine"
+            ],
+            "correct-diagnosis": "Flu"
+        },
+        {
+            "symptoms": [
+                "Low Mood",
+                "Loosing Motivation",
+                "Low Self-esteem"
+            ],
+            "diagnoses": [
+                "Depression",
+                "Anxiety",
+                "Dementia"
+            ],
+            "correct-diagnosis": "Depression"
+        },
+        {
+            "symptoms": [
+                "Chest Pain",
+                "Weight Loss",
+                "Shortness of Breath"
+            ],
+            "diagnoses": [
+                "Lung Cancer",
+                "Kidney Infection",
+                "Malaria"
+            ],
+            "correct-diagnosis": "Lung Cancer"
+        }
+    ]
+}

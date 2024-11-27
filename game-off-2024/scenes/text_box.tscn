@@ -4,12 +4,12 @@
 [ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="2_s0dyb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylnh1"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(0.803922, 0.72549, 0.580392, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(1, 1, 1, 1)
+border_color = Color(0.164706, 0.141176, 0.117647, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -48,6 +48,7 @@ layout_mode = 2
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_fonts/font = ExtResource("2_s0dyb")
 theme_override_font_sizes/font_size = 16
 text = "*"
@@ -59,6 +60,7 @@ custom_minimum_size = Vector2(8, 8)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_fonts/font = ExtResource("2_s0dyb")
 theme_override_font_sizes/font_size = 16
 autowrap_mode = 3

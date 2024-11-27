@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmxo8em7p5fr1"
-path="res://.godot/imported/triangle.png-21fcd99c600099495ffc06d803e36a99.ctex"
+uid="uid://bw4mdwexlhw3q"
+path="res://.godot/imported/doctor.png-4ffc4bcd6cd8c78ca09c10aaeacc2edc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/minigrams/child/triangle.png"
-dest_files=["res://.godot/imported/triangle.png-21fcd99c600099495ffc06d803e36a99.ctex"]
+source_file="res://assets/minigames/doctor/doctor.png"
+dest_files=["res://.godot/imported/doctor.png-4ffc4bcd6cd8c78ca09c10aaeacc2edc.ctex"]
 
 [params]
 
