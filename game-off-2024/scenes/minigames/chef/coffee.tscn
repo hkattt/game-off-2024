@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://brca68uuhnypp"]
+
+[ext_resource type="Texture2D" uid="uid://m3tyxkuhu0q8" path="res://assets/minigames/chef/coffee.png" id="1_trkhy"]
+
+[node name="Coffee" type="Sprite2D"]
+texture_filter = 3
+texture = ExtResource("1_trkhy")

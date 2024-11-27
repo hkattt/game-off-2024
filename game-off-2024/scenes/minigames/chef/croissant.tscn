@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://btduocmldskj3"]
+
+[ext_resource type="Texture2D" uid="uid://immuep6m0mh8" path="res://assets/minigames/chef/croissant.png" id="1_fee2w"]
+
+[node name="Croissant" type="Sprite2D"]
+texture_filter = 3
+texture = ExtResource("1_fee2w")
