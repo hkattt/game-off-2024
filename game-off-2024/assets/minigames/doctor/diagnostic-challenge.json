@@ -2,42 +2,42 @@
     "challenges": [
         {
             "symptoms": [
-                "Symptom 1111",
-                "Symptom 2",
-                "Symptom 3"
+                "Fever",
+                "Cough",
+                "Sore Throat"
             ],
             "diagnoses": [
-                "Diagnosis 1",
-                "Diagnosis 2",
-                "Diagnosis 3"
+                "Chickenpox",
+                "Flu",
+                "Migraine"
             ],
-            "correct-diagnosis": "Diagnosis 1"
+            "correct-diagnosis": "Flu"
         },
         {
             "symptoms": [
-                "Symptom 1",
-                "Symptom 2",
-                "Symptom 3"
+                "Low Mood",
+                "Loosing Motivation",
+                "Low Self-esteem"
             ],
             "diagnoses": [
-                "Diagnosis 1",
-                "Diagnosis 2",
-                "Diagnosis 3"
+                "Depression",
+                "Anxiety",
+                "Dementia"
             ],
-            "correct-diagnosis": "Diagnosis 1"
+            "correct-diagnosis": "Depression"
         },
         {
             "symptoms": [
-                "Symptom 1",
-                "Symptom 2",
-                "Symptom 3"
+                "Chest Pain",
+                "Weight Loss",
+                "Shortness of Breath"
             ],
             "diagnoses": [
-                "Diagnosis 1",
-                "Diagnosis 2",
-                "Diagnosis 3"
+                "Lung Cancer",
+                "Kidney Infection",
+                "Malaria"
             ],
-            "correct-diagnosis": "Diagnosis 1"
+            "correct-diagnosis": "Lung Cancer"
         }
     ]
 }
