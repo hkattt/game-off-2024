@@ -49,8 +49,6 @@ func _process(delta: float) -> void:
 			if level == Minigame.Level.COMPLETE:
 				# Sleep for 5 seconds
 				await get_tree().create_timer(5).timeout
-				# TODO: Show the opening line?
-				# text_box.set_text(dialogue_manager.get_closing_line())
 				interview_state = InterviewState.COMPLETE 
 			else:	
 				# Instantiate the next level

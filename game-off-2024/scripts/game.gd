@@ -3,12 +3,15 @@ extends Node2D
 enum Character {
 	CHILD,
 	CHEF,
+	DONE,
 	SCIENTIST,
 	DOCTOR,
 	ARTIST
 }
 
-@onready var interview_scene: PackedScene = preload("res://scenes/interview.tscn")
+@onready var interview_scene: PackedScene  = preload("res://scenes/interview.tscn")
+@onready var accusation_scene: PackedScene = preload("res://scenes/accusation.tscn")
+
 @onready var dialogue_manager: Node2D = $DialogueManager
 
 var character: Character = Character.CHILD
@@ -26,7 +29,13 @@ func _process(delta: float) -> void:
 			interview.free()
 			dialogue_manager.next_character()
 			character = next_character(character)
-			instantiate_interview(character)
+			# Checks if all the characters have been interviewed
+			if character == Character.DONE:
+				# Switches to the accusation scene (i.e. pick the killer)
+				get_tree().change_scene_to_packed(accusation_scene)
+			else:
+				# Starts the next interview
+				instantiate_interview(character)
 
 func instantiate_interview(character: Character):
 	# Path to character scene and minigame scene
@@ -45,11 +54,11 @@ func instantiate_interview(character: Character):
 func next_character(character: Character) -> Character:
 	match character:
 		Character.CHILD:     return Character.DOCTOR
-		Character.DOCTOR:    return Character.CHILD
+		Character.DOCTOR:    return Character.DONE
 		Character.CHEF:      return Character.SCIENTIST
 		Character.SCIENTIST: return Character.ARTIST
 		Character.ARTIST:    return Character.CHILD
-		_:                   return Character.CHILD
+		_:                   return Character.DONE
 
 func character_to_string(character: Character) -> String:
 	match character:
