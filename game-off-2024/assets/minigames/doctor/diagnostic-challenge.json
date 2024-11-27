@@ -1,0 +1,43 @@
+{
+    "challenges": [
+        {
+            "symptoms": [
+                "Symptom 1111",
+                "Symptom 2",
+                "Symptom 3"
+            ],
+            "diagnoses": [
+                "Diagnosis 1",
+                "Diagnosis 2",
+                "Diagnosis 3"
+            ],
+            "correct-diagnosis": "Diagnosis 1"
+        },
+        {
+            "symptoms": [
+                "Symptom 1",
+                "Symptom 2",
+                "Symptom 3"
+            ],
+            "diagnoses": [
+                "Diagnosis 1",
+                "Diagnosis 2",
+                "Diagnosis 3"
+            ],
+            "correct-diagnosis": "Diagnosis 1"
+        },
+        {
+            "symptoms": [
+                "Symptom 1",
+                "Symptom 2",
+                "Symptom 3"
+            ],
+            "diagnoses": [
+                "Diagnosis 1",
+                "Diagnosis 2",
+                "Diagnosis 3"
+            ],
+            "correct-diagnosis": "Diagnosis 1"
+        }
+    ]
+}

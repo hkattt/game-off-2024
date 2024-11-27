@@ -45,18 +45,18 @@ func instantiate_interview(character: Character):
 func character_to_string(character: Character) -> String:
 	match character:
 		Character.CHILD:     return "child"
+		Character.DOCTOR:    return "doctor" 
 		Character.CHEF:      return "chef"
 		Character.SCIENTIST: return "scientist"
-		Character.DOCTOR:    return "doctor" 
 		Character.ARTIST:    return "artist"
 		_:                   return ""
 		
 func character_to_index(character: Character) -> int:
 	match character:
 		Character.CHILD:     return 0
-		Character.CHEF:      return 1
-		Character.SCIENTIST: return 2
-		Character.DOCTOR:    return 3
+		Character.DOCTOR:    return 1
+		Character.CHEF:      return 2
+		Character.SCIENTIST: return 3
 		Character.ARTIST:    return 4
 		_:                   return -1
 	
