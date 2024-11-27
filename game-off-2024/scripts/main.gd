@@ -11,7 +11,7 @@ enum Character {
 @onready var interview_scene: PackedScene = preload("res://scenes/interview.tscn")
 @onready var dialogue_manager: Node2D = $DialogueManager
 
-var character: Character = Character.DOCTOR
+var character: Character = Character.CHILD
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 		if interview.is_over():
 			interview.free()
 			dialogue_manager.next_character()
-			# TODO: character = next_character(character)
+			character = next_character(character)
 			instantiate_interview(character)
 
 func instantiate_interview(character: Character):
@@ -41,6 +41,15 @@ func instantiate_interview(character: Character):
 	interview.set_character(character_scene_path)
 	interview.set_minigame(character_minigame_scene_path)
 	add_child(interview)
+	
+func next_character(character: Character) -> Character:
+	match character:
+		Character.CHILD:     return Character.DOCTOR
+		Character.DOCTOR:    return Character.CHILD
+		Character.CHEF:      return Character.SCIENTIST
+		Character.SCIENTIST: return Character.ARTIST
+		Character.ARTIST:    return Character.CHILD
+		_:                   return Character.CHILD
 
 func character_to_string(character: Character) -> String:
 	match character:
