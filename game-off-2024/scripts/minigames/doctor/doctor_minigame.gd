@@ -1,12 +1,12 @@
 extends "res://scripts/minigames/minigame.gd"
 
-@onready var symptom1: Label = $"VBoxContainer/SymptomHBoxContainer/Symptom 1"
-@onready var symptom2: Label = $"VBoxContainer/SymptomHBoxContainer/Symptom 2"
-@onready var symptom3: Label = $"VBoxContainer/SymptomHBoxContainer/Symptom 3"
+@onready var symptom1: Label = $"MarginContainer/VBoxContainer/SymptomHBoxContainer/Symptom 1"
+@onready var symptom2: Label = $"MarginContainer/VBoxContainer/SymptomHBoxContainer/Symptom 2"
+@onready var symptom3: Label = $"MarginContainer/VBoxContainer/SymptomHBoxContainer/Symptom 3"
 
-@onready var diagnosis1: Button = $"VBoxContainer/DiagnosisHBoxContainer/Diagnosis 1"
-@onready var diagnosis2: Button = $"VBoxContainer/DiagnosisHBoxContainer/Diagnosis 2"
-@onready var diagnosis3: Button = $"VBoxContainer/DiagnosisHBoxContainer/Diagnosis 3"
+@onready var diagnosis1: Button = $"MarginContainer/VBoxContainer/DiagnosisHBoxContainer/Diagnosis 1"
+@onready var diagnosis2: Button = $"MarginContainer/VBoxContainer/DiagnosisHBoxContainer/Diagnosis 2"
+@onready var diagnosis3: Button = $"MarginContainer/VBoxContainer/DiagnosisHBoxContainer/Diagnosis 3"
 
 var diagnostic_challenges: Array = []
 var correct_diagnosis: String
@@ -56,3 +56,21 @@ func set_challenge_index() -> void:
 			challenge_index = 2
 		_:
 			challenge_index = -1
+
+func _on_diagnosis_1_button_up() -> void:
+	if diagnosis1.text == correct_diagnosis:
+		won_game()
+	else:
+		lose_game()
+
+func _on_diagnosis_2_button_up() -> void:
+	if diagnosis2.text == correct_diagnosis:
+		won_game()
+	else:
+		lose_game()
+
+func _on_diagnosis_3_button_up() -> void:
+	if diagnosis3.text == correct_diagnosis:
+		won_game()
+	else:
+		lose_game()

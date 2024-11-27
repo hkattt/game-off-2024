@@ -1,7 +1,39 @@
-[gd_scene load_steps=3 format=3 uid="uid://ck5id71nprqt3"]
+[gd_scene load_steps=5 format=3 uid="uid://ck5id71nprqt3"]
 
 [ext_resource type="Script" path="res://scripts/minigames/doctor/doctor_minigame.gd" id="1_2q7ea"]
 [ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="2_7bcpl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0u0n"]
+bg_color = Color(0.741176, 0.647059, 0.513726, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.164706, 0.141176, 0.117647, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_54iay"]
+bg_color = Color(0.803922, 0.72549, 0.580392, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.164706, 0.141176, 0.117647, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
 
 [node name="DoctorMinigame" type="Node2D"]
 script = ExtResource("1_2q7ea")
@@ -11,57 +43,127 @@ visible = false
 offset_right = 296.0
 offset_bottom = 96.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 296.0
+offset_bottom = 96.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 2
 
-[node name="SymptomHBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 8
+alignment = 1
 
-[node name="Symptom 1" type="Label" parent="VBoxContainer/SymptomHBoxContainer"]
+[node name="Symptoms" type="Label" parent="MarginContainer/VBoxContainer"]
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_fonts/font = ExtResource("2_7bcpl")
+text = "Symptoms"
+horizontal_alignment = 1
+
+[node name="SymptomHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Symptom 1" type="Label" parent="MarginContainer/VBoxContainer/SymptomHBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_fonts/font = ExtResource("2_7bcpl")
 text = "Symptom 1"
 
-[node name="Symptom 2" type="Label" parent="VBoxContainer/SymptomHBoxContainer"]
+[node name="Symptom 2" type="Label" parent="MarginContainer/VBoxContainer/SymptomHBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_fonts/font = ExtResource("2_7bcpl")
 text = "Symptom 2"
 
-[node name="Symptom 3" type="Label" parent="VBoxContainer/SymptomHBoxContainer"]
+[node name="Symptom 3" type="Label" parent="MarginContainer/VBoxContainer/SymptomHBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_fonts/font = ExtResource("2_7bcpl")
 text = "Symptom 3"
 
-[node name="DiagnosisHBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="Diagnosis 1" type="Button" parent="VBoxContainer/DiagnosisHBoxContainer"]
+[node name="Diagnoses" type="Label" parent="MarginContainer/VBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_fonts/font = ExtResource("2_7bcpl")
+text = "Diagnoses"
+horizontal_alignment = 1
+
+[node name="DiagnosisHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Diagnosis 1" type="Button" parent="MarginContainer/VBoxContainer/DiagnosisHBoxContainer"]
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_colors/font_hover_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_colors/font_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_colors/font_focus_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_fonts/font = ExtResource("2_7bcpl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/normal = SubResource("StyleBoxFlat_54iay")
 text = "Diagnosis 1
 "
 
-[node name="Diagnosis 2" type="Button" parent="VBoxContainer/DiagnosisHBoxContainer"]
+[node name="Diagnosis 2" type="Button" parent="MarginContainer/VBoxContainer/DiagnosisHBoxContainer"]
 texture_filter = 3
 layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_colors/font_hover_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_colors/font_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_colors/font_focus_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_fonts/font = ExtResource("2_7bcpl")
-text = "Diagnosis 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/normal = SubResource("StyleBoxFlat_54iay")
+text = "Diagnosis 1
 "
 
-[node name="Diagnosis 3" type="Button" parent="VBoxContainer/DiagnosisHBoxContainer"]
+[node name="Diagnosis 3" type="Button" parent="MarginContainer/VBoxContainer/DiagnosisHBoxContainer"]
 texture_filter = 3
 layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_colors/font_hover_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_colors/font_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_colors/font_focus_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_fonts/font = ExtResource("2_7bcpl")
-text = "Diagnosis 3
+theme_override_styles/focus = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e0u0n")
+theme_override_styles/normal = SubResource("StyleBoxFlat_54iay")
+text = "Diagnosis 1
 "
+
+[connection signal="button_up" from="MarginContainer/VBoxContainer/DiagnosisHBoxContainer/Diagnosis 1" to="." method="_on_diagnosis_1_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/DiagnosisHBoxContainer/Diagnosis 2" to="." method="_on_diagnosis_2_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/DiagnosisHBoxContainer/Diagnosis 3" to="." method="_on_diagnosis_3_button_up"]
