@@ -6,6 +6,10 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jse2k"]
 bg_color = Color(0.164706, 0.141176, 0.117647, 1)
 border_color = Color(0.164706, 0.141176, 0.117647, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="Interview" type="Node2D"]
 script = ExtResource("1_mv5me")
