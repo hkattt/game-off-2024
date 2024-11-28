@@ -6,8 +6,14 @@ extends "res://scripts/minigames/minigame.gd"
 @onready var donut_scene: PackedScene     = preload("res://scenes/minigames/chef/donut.tscn")
 @onready var ice_cream_scene: PackedScene = preload("res://scenes/minigames/chef/ice_cream.tscn")
 @onready var pizza_scene: PackedScene     = preload("res://scenes/minigames/chef/pizza.tscn")
-
-@onready var food_scenes: Array = [chicken_scene, coffee_scene, croissant_scene, donut_scene, ice_cream_scene, pizza_scene]
+@onready var food_scenes: Array = [
+	chicken_scene, 
+	coffee_scene, 
+	croissant_scene, 
+	donut_scene, 
+	ice_cream_scene, 
+	pizza_scene
+]
 
 var food_timer = 5.0
 
