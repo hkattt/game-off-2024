@@ -1,12 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://bx6i6tuijba7m"]
+[gd_scene load_steps=2 format=3 uid="uid://bx6i6tuijba7m"]
 
-[ext_resource type="PackedScene" uid="uid://brca68uuhnypp" path="res://scenes/minigames/chef/coffee.tscn" id="1_8how2"]
 [ext_resource type="Script" path="res://scripts/minigames/chef/chef_minigame.gd" id="1_qopp5"]
-[ext_resource type="PackedScene" uid="uid://wpy6on2fcdi2" path="res://scenes/minigames/chef/chicken.tscn" id="2_w3osb"]
-[ext_resource type="PackedScene" uid="uid://btduocmldskj3" path="res://scenes/minigames/chef/croissant.tscn" id="3_plyyg"]
-[ext_resource type="PackedScene" uid="uid://7qwyryle4f53" path="res://scenes/minigames/chef/donut.tscn" id="4_4x5jm"]
-[ext_resource type="PackedScene" uid="uid://bpjbaddv4eutn" path="res://scenes/minigames/chef/ice_cream.tscn" id="5_3nivj"]
-[ext_resource type="PackedScene" uid="uid://djcu41n6nw0ct" path="res://scenes/minigames/chef/pizza.tscn" id="6_enrme"]
 
 [node name="ChildMinigame" type="Node2D"]
 script = ExtResource("1_qopp5")
@@ -15,21 +9,3 @@ script = ExtResource("1_qopp5")
 visible = false
 offset_right = 296.0
 offset_bottom = 96.0
-
-[node name="Coffee" parent="." instance=ExtResource("1_8how2")]
-position = Vector2(128, 96)
-
-[node name="Chicken" parent="." instance=ExtResource("2_w3osb")]
-position = Vector2(224, 88)
-
-[node name="Croissant" parent="." instance=ExtResource("3_plyyg")]
-position = Vector2(240, 48)
-
-[node name="Donut" parent="." instance=ExtResource("4_4x5jm")]
-position = Vector2(144, 56)
-
-[node name="IceCream" parent="." instance=ExtResource("5_3nivj")]
-position = Vector2(48, 80)
-
-[node name="Pizza" parent="." instance=ExtResource("6_enrme")]
-position = Vector2(56, 32)

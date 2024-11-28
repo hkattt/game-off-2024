@@ -1,7 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://djcu41n6nw0ct"]
+[gd_scene load_steps=3 format=3 uid="uid://djcu41n6nw0ct"]
 
 [ext_resource type="Texture2D" uid="uid://p2jpjbki1cs" path="res://assets/minigames/chef/pizza.png" id="1_nm3m4"]
+[ext_resource type="Script" path="res://scripts/minigames/chef/pizza.gd" id="2_tidgm"]
 
 [node name="Pizza" type="Sprite2D"]
 texture_filter = 3
 texture = ExtResource("1_nm3m4")
+script = ExtResource("2_tidgm")

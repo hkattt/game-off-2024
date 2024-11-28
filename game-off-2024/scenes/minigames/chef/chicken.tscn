@@ -1,7 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://wpy6on2fcdi2"]
+[gd_scene load_steps=3 format=3 uid="uid://wpy6on2fcdi2"]
 
 [ext_resource type="Texture2D" uid="uid://cq1k37ccucvx" path="res://assets/minigames/chef/chicken.png.png" id="1_oh1k2"]
+[ext_resource type="Script" path="res://scripts/minigames/chef/chicken.gd" id="2_t2s2u"]
 
 [node name="Chicken" type="Sprite2D"]
 texture_filter = 3
 texture = ExtResource("1_oh1k2")
+script = ExtResource("2_t2s2u")
