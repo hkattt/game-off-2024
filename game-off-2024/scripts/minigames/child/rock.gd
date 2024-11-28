@@ -1,8 +1,10 @@
 extends Area2D
 
-var speed: float = 200
+@onready var death_sound: AudioStreamPlayer2D = $DeathSound
 
 var minigame: Node2D
+
+var speed: float = 200
 
 func _ready() -> void:
 	minigame = get_parent()
@@ -16,5 +18,6 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body):
 	if body is CharacterBody2D:
+		death_sound.play()
 		minigame.lose_game()
 		queue_free()
