@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cy2wlk25kk4wf"]
+[gd_scene load_steps=3 format=3 uid="uid://cy2wlk25kk4wf"]
 
 [ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="2_nvc7u"]
+[ext_resource type="AudioStream" uid="uid://c270u3jfsksj2" path="res://assets/sound/mysterious.mp3" id="2_plxe2"]
 
 [node name="StartMenu" type="Node2D"]
 
@@ -27,3 +28,8 @@ theme_override_font_sizes/font_size = 32
 text = "Congratulations! You identified the killer. "
 horizontal_alignment = 1
 autowrap_mode = 3
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_plxe2")
+autoplay = true
+parameters/looping = false

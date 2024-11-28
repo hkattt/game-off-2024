@@ -1,9 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://buy30u0ncpxfq"]
+[gd_scene load_steps=7 format=3 uid="uid://buy30u0ncpxfq"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_mpnhq"]
 [ext_resource type="PackedScene" uid="uid://dq2scec23allp" path="res://scenes/dialogue_manager.tscn" id="2_7tgp1"]
+[ext_resource type="AudioStream" uid="uid://b2fq3ldd0wwc" path="res://assets/sound/scifi.mp3" id="3_11ofn"]
+[ext_resource type="AudioStream" uid="uid://cfei80grt3kcl" path="res://assets/sound/upbeat.mp3" id="3_i3vsi"]
+[ext_resource type="AudioStream" uid="uid://bw0lwnx6uybi5" path="res://assets/sound/relaxing.mp3" id="4_wyutl"]
+[ext_resource type="AudioStream" uid="uid://b8c16eu36fgkr" path="res://assets/sound/energy.mp3" id="5_yb5pq"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_mpnhq")
 
 [node name="DialogueManager" parent="." instance=ExtResource("2_7tgp1")]
+
+[node name="ChildBackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_i3vsi")
+parameters/looping = false
+
+[node name="DoctorBackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_wyutl")
+parameters/looping = false
+
+[node name="ChefBackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_yb5pq")
+parameters/looping = false
+
+[node name="ScientistBackgroundMusic4" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_11ofn")
+parameters/looping = false

@@ -17,7 +17,11 @@ This game was made using Godot 4 and GDScript for [GitHub Game Off 2024](https:/
 
 ## Asset References
 1. Font: https://www.pentacom.jp/pentacom/bitfontmaker2/gallery/?id=381
-
+2. Upbeat child background music: https://freesound.org/people/outerandeventhorizon/sounds/474881/
+3. Relaxing doctor background music: https://freesound.org/people/Migfus20/sounds/564001/
+4. High-energy chef background music: https://freesound.org/people/Universfield/sounds/768476/
+5. Sci-fi scientist background music: https://freesound.org/people/ispeakwaves/sounds/455515/
+6. Mysterious background music: https://freesound.org/people/Victor_Natas/sounds/545221/
 
 ## Code References
 1. Text Box: https://www.youtube.com/watch?v=QEHOiORnXIk 
