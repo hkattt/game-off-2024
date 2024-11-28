@@ -2,10 +2,10 @@ extends Node2D
 
 enum Character {
 	CHILD,
+	DOCTOR,
 	CHEF,
 	DONE,
 	SCIENTIST,
-	DOCTOR,
 	ARTIST
 }
 
@@ -14,7 +14,7 @@ enum Character {
 
 @onready var dialogue_manager: Node2D = $DialogueManager
 
-var character: Character = Character.CHILD
+var character: Character = Character.CHEF
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
@@ -54,8 +54,8 @@ func instantiate_interview(character: Character):
 func next_character(character: Character) -> Character:
 	match character:
 		Character.CHILD:     return Character.DOCTOR
-		Character.DOCTOR:    return Character.DONE
-		Character.CHEF:      return Character.SCIENTIST
+		Character.DOCTOR:    return Character.CHEF
+		Character.CHEF:      return Character.DONE
 		Character.SCIENTIST: return Character.ARTIST
 		Character.ARTIST:    return Character.CHILD
 		_:                   return Character.DONE

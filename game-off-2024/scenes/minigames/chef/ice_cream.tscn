@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3b04pxmx3qgk"]
+
+[ext_resource type="Script" path="res://scripts/minigames/chef/chicken.gd" id="1_diaiw"]
+[ext_resource type="Texture2D" uid="uid://41rwbvj17lkv" path="res://assets/minigames/chef/ice-cream.png.png" id="2_48f2e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejjbf"]
+size = Vector2(7, 10)
+
+[node name="IceCream" type="Area2D"]
+texture_filter = 3
+script = ExtResource("1_diaiw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_48f2e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_ejjbf")
