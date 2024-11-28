@@ -12,7 +12,7 @@ var spawn_time_min: float
 var spawn_time_max: float
 # Current timer for the obstacle spawn and finish line spawn
 var spawn_timer: float = 0.0
-var win_timer: float = 20.0
+var win_timer: float = 10.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
