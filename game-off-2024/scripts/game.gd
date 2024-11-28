@@ -4,9 +4,8 @@ enum Character {
 	CHILD,
 	DOCTOR,
 	CHEF,
-	DONE,
 	SCIENTIST,
-	ARTIST
+	DONE,
 }
 
 @onready var interview_scene: PackedScene  = preload("res://scenes/interview.tscn")
@@ -14,7 +13,7 @@ enum Character {
 
 @onready var dialogue_manager: Node2D = $DialogueManager
 
-var character: Character = Character.CHEF
+var character: Character = Character.CHILD
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
@@ -55,9 +54,8 @@ func next_character(character: Character) -> Character:
 	match character:
 		Character.CHILD:     return Character.DOCTOR
 		Character.DOCTOR:    return Character.CHEF
-		Character.CHEF:      return Character.DONE
-		Character.SCIENTIST: return Character.ARTIST
-		Character.ARTIST:    return Character.CHILD
+		Character.CHEF:      return Character.SCIENTIST
+		Character.SCIENTIST: return Character.DONE
 		_:                   return Character.DONE
 
 func character_to_string(character: Character) -> String:
@@ -66,7 +64,6 @@ func character_to_string(character: Character) -> String:
 		Character.DOCTOR:    return "doctor" 
 		Character.CHEF:      return "chef"
 		Character.SCIENTIST: return "scientist"
-		Character.ARTIST:    return "artist"
 		_:                   return ""
 		
 func character_to_index(character: Character) -> int:
@@ -75,7 +72,6 @@ func character_to_index(character: Character) -> int:
 		Character.DOCTOR:    return 1
 		Character.CHEF:      return 2
 		Character.SCIENTIST: return 3
-		Character.ARTIST:    return 4
 		_:                   return -1
 	
 func character_scene_path(character: Character) -> String:

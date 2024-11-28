@@ -1,0 +1,52 @@
+{
+    "challenges": [
+        {
+            "elements": [
+                "13",
+                "18",
+                "23",
+                "28",
+                "[?]",
+                "38"
+            ],
+            "missing-elements": [
+                "30",
+                "32",
+                "33"
+            ],
+            "correct-missing-element": "33"
+        },
+        {
+            "elements": [
+                "10",
+                "15",
+                "25",
+                "35",
+                "55",
+                "[?]"
+            ],
+            "missing-elements": [
+                "60",
+                "65",
+                "75"
+            ],
+            "correct-missing-element": "65"
+        },
+        {
+            "elements": [
+                "7",
+                "[?]",
+                "9",
+                "6",
+                "11",
+                "8"
+            ],
+            "missing-elements": [
+                "4",
+                "10",
+                "12"
+            ],
+            "correct-missing-element": "4"
+        }
+    ]
+}
