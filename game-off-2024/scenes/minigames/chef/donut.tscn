@@ -1,9 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://7qwyryle4f53"]
+[gd_scene load_steps=4 format=3 uid="uid://b3tht4l7hlff0"]
 
 [ext_resource type="Texture2D" uid="uid://c1mrmokxoca7c" path="res://assets/minigames/chef/donut.png.png" id="1_3l34l"]
-[ext_resource type="Script" path="res://scripts/minigames/chef/donut.gd" id="2_vexq0"]
+[ext_resource type="Script" path="res://scripts/minigames/chef/chicken.gd" id="1_r46wx"]
 
-[node name="Donut" type="Sprite2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejjbf"]
+size = Vector2(14, 9)
+
+[node name="Donut" type="Area2D"]
 texture_filter = 3
+script = ExtResource("1_r46wx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_3l34l")
-script = ExtResource("2_vexq0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ejjbf")

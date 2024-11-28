@@ -1,9 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://brca68uuhnypp"]
+[gd_scene load_steps=4 format=3 uid="uid://bt700pulyj565"]
 
+[ext_resource type="Script" path="res://scripts/minigames/chef/chicken.gd" id="1_acea5"]
 [ext_resource type="Texture2D" uid="uid://m3tyxkuhu0q8" path="res://assets/minigames/chef/coffee.png" id="1_trkhy"]
-[ext_resource type="Script" path="res://scripts/minigames/chef/coffee.gd" id="2_fwpmy"]
 
-[node name="Coffee" type="Sprite2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejjbf"]
+size = Vector2(12, 10)
+
+[node name="Coffee" type="Area2D"]
 texture_filter = 3
+script = ExtResource("1_acea5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_trkhy")
-script = ExtResource("2_fwpmy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_ejjbf")
