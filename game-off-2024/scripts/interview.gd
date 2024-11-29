@@ -4,7 +4,9 @@ enum InterviewState {
 	RUNNING,
 	COMPLETE
 }
-@onready var text_box: CanvasLayer          = $TextBox
+
+@onready var text_box: MarginContainer      = $TextBox
+@onready var character_name: Label          = $CharacterName
 @onready var minigame_viewport: SubViewport = $MinigamePanel/SubViewportContainer/SubViewport
 
 const Minigame = preload("res://scripts/minigames/minigame.gd")
@@ -20,9 +22,12 @@ var level: Minigame.Level = Minigame.Level.EASY
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
 	dialogue_manager = get_parent().get_node("DialogueManager")
+	character_name.text = dialogue_manager.get_character()
 	text_box.set_text(dialogue_manager.get_opening_line())
 	instantiate_character()
 	instantiate_minigame(level)
+	# Sleep for 5 seconds
+	await get_tree().create_timer(5).timeout
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

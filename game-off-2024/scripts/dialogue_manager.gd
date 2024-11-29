@@ -31,6 +31,9 @@ func next_positive_line() -> void:
 func next_negative_line() -> void:
 	negative_dialogue_index += 1
 	
+func get_character() -> String:
+	return dialogues[character_index]["character"]
+	
 func get_opening_line() -> String:
 	return dialogues[character_index]["opening"]
 
