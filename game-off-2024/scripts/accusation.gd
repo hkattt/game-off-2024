@@ -17,11 +17,11 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_child_button_button_up() -> void:
-	get_tree().change_scene_to_packed(victory_scene)
+	get_tree().change_scene_to_packed(lose_scene)
 	SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)	
 
 func _on_doctor_button_button_up() -> void:
-	get_tree().change_scene_to_packed(lose_scene)
+	get_tree().change_scene_to_packed(victory_scene)
 	SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)
 
 func _on_chef_button_button_up() -> void:
