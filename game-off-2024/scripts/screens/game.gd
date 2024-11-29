@@ -8,8 +8,8 @@ enum Character {
 	DONE,
 }
 
-@onready var interview_scene: PackedScene  = preload("res://scenes/interview.tscn")
-@onready var accusation_scene: PackedScene = preload("res://scenes/accusation.tscn")
+@onready var interview_scene: PackedScene  = preload("res://scenes/screens/interview.tscn")
+@onready var accusation_scene: PackedScene = preload("res://scenes/screens/accusation.tscn")
 
 @onready var dialogue_manager: Node2D = $DialogueManager
 

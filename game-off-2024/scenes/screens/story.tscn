@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://bmnyiqyg3g447"]
 
-[ext_resource type="PackedScene" uid="uid://dxuo3kk60cdkk" path="res://scenes/text_box.tscn" id="1_kvhw0"]
-[ext_resource type="Script" path="res://scripts/story.gd" id="1_vxi6x"]
-[ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="3_o8vq5"]
+[ext_resource type="Script" path="res://scripts/screens/story.gd" id="1_ls0p2"]
+[ext_resource type="PackedScene" uid="uid://dxuo3kk60cdkk" path="res://scenes/text_box.tscn" id="2_an1l8"]
+[ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="3_w8y6o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsic3"]
 bg_color = Color(0.741176, 0.647059, 0.513726, 1)
@@ -37,9 +37,9 @@ expand_margin_right = 1.0
 expand_margin_bottom = 1.0
 
 [node name="Story" type="Node2D"]
-script = ExtResource("1_vxi6x")
+script = ExtResource("1_ls0p2")
 
-[node name="TextBox" parent="." instance=ExtResource("1_kvhw0")]
+[node name="TextBox" parent="." instance=ExtResource("2_an1l8")]
 offset_right = 320.0
 offset_bottom = 240.0
 
@@ -55,7 +55,7 @@ theme_override_colors/font_hover_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_focus_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("3_o8vq5")
+theme_override_fonts/font = ExtResource("3_w8y6o")
 theme_override_styles/focus = SubResource("StyleBoxFlat_wsic3")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_wsic3")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_wsic3")

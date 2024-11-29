@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cr4gm05own8c2"]
 
-[ext_resource type="Script" path="res://scripts/start_menu.gd" id="1_g3kh7"]
+[ext_resource type="Script" path="res://scripts/screens/start_menu.gd" id="1_g3kh7"]
 [ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="1_kugo8"]
 
 [node name="StartMenu" type="Node2D"]

@@ -1,6 +1,6 @@
 extends Node2D
 
-const story_scene: PackedScene = preload("res://scenes/story.tscn")
+const story_scene: PackedScene = preload("res://scenes/screens/story.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -1,14 +1,14 @@
 [gd_scene load_steps=7 format=3 uid="uid://khbsfu8osnus"]
 
-[ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="1_b2jg4"]
-[ext_resource type="Script" path="res://scripts/accusation.gd" id="1_emqx3"]
-[ext_resource type="Texture2D" uid="uid://dekotuv2ccpvr" path="res://assets/minigames/child/child.png" id="2_tew3k"]
-[ext_resource type="Texture2D" uid="uid://bw4mdwexlhw3q" path="res://assets/minigames/doctor/doctor.png" id="3_cor4i"]
-[ext_resource type="Texture2D" uid="uid://267yj8mmwhh1" path="res://assets/minigames/chef/chef.png" id="4_tyntc"]
-[ext_resource type="Texture2D" uid="uid://bbnd1yovc3guw" path="res://assets/minigames/computer-scientist/computer-scientist.png" id="6_1wxhv"]
+[ext_resource type="Script" path="res://scripts/screens/accusation.gd" id="1_hq3lw"]
+[ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="2_5einh"]
+[ext_resource type="Texture2D" uid="uid://dekotuv2ccpvr" path="res://assets/minigames/child/child.png" id="3_2ig72"]
+[ext_resource type="Texture2D" uid="uid://bw4mdwexlhw3q" path="res://assets/minigames/doctor/doctor.png" id="4_pmh1n"]
+[ext_resource type="Texture2D" uid="uid://267yj8mmwhh1" path="res://assets/minigames/chef/chef.png" id="5_ngj2i"]
+[ext_resource type="Texture2D" uid="uid://bbnd1yovc3guw" path="res://assets/minigames/computer-scientist/computer-scientist.png" id="6_b11og"]
 
 [node name="Accusation" type="Node2D"]
-script = ExtResource("1_emqx3")
+script = ExtResource("1_hq3lw")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 offset_right = 320.0
@@ -28,7 +28,7 @@ alignment = 1
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("1_b2jg4")
+theme_override_fonts/font = ExtResource("2_5einh")
 theme_override_font_sizes/font_size = 32
 text = "Choose the killer"
 horizontal_alignment = 1
@@ -48,17 +48,17 @@ texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource("2_tew3k")
-texture_pressed = ExtResource("2_tew3k")
-texture_hover = ExtResource("2_tew3k")
-texture_focused = ExtResource("2_tew3k")
+texture_normal = ExtResource("3_2ig72")
+texture_pressed = ExtResource("3_2ig72")
+texture_hover = ExtResource("3_2ig72")
+texture_focused = ExtResource("3_2ig72")
 stretch_mode = 3
 
 [node name="ChildName" type="Label" parent="MarginContainer/VBoxContainer/TopHBoxContainer/ChildVBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("1_b2jg4")
+theme_override_fonts/font = ExtResource("2_5einh")
 text = "Kite"
 horizontal_alignment = 1
 
@@ -72,17 +72,17 @@ texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource("3_cor4i")
-texture_pressed = ExtResource("3_cor4i")
-texture_hover = ExtResource("3_cor4i")
-texture_focused = ExtResource("3_cor4i")
+texture_normal = ExtResource("4_pmh1n")
+texture_pressed = ExtResource("4_pmh1n")
+texture_hover = ExtResource("4_pmh1n")
+texture_focused = ExtResource("4_pmh1n")
 stretch_mode = 3
 
 [node name="DoctorName" type="Label" parent="MarginContainer/VBoxContainer/TopHBoxContainer/DoctorVBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("1_b2jg4")
+theme_override_fonts/font = ExtResource("2_5einh")
 text = "Dr. Grey"
 horizontal_alignment = 1
 
@@ -101,17 +101,17 @@ texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource("4_tyntc")
-texture_pressed = ExtResource("4_tyntc")
-texture_hover = ExtResource("4_tyntc")
-texture_focused = ExtResource("4_tyntc")
+texture_normal = ExtResource("5_ngj2i")
+texture_pressed = ExtResource("5_ngj2i")
+texture_hover = ExtResource("5_ngj2i")
+texture_focused = ExtResource("5_ngj2i")
 stretch_mode = 3
 
 [node name="ChefName" type="Label" parent="MarginContainer/VBoxContainer/BottomHBoxContainer/ChefVBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("1_b2jg4")
+theme_override_fonts/font = ExtResource("2_5einh")
 text = "Patrica"
 horizontal_alignment = 1
 
@@ -125,17 +125,17 @@ texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource("6_1wxhv")
-texture_pressed = ExtResource("6_1wxhv")
-texture_hover = ExtResource("6_1wxhv")
-texture_focused = ExtResource("6_1wxhv")
+texture_normal = ExtResource("6_b11og")
+texture_pressed = ExtResource("6_b11og")
+texture_hover = ExtResource("6_b11og")
+texture_focused = ExtResource("6_b11og")
 stretch_mode = 3
 
 [node name="ComputerScientistName" type="Label" parent="MarginContainer/VBoxContainer/BottomHBoxContainer/ComputerScientistVBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("1_b2jg4")
+theme_override_fonts/font = ExtResource("2_5einh")
 text = "Prof. Vanth"
 horizontal_alignment = 1
 

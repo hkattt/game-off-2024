@@ -5,8 +5,8 @@ extends Node2D
 @onready var chef_button: TextureButton      = $MarginContainer/VBoxContainer/BottomHBoxContainer/ChefVBoxContainer/ChefButton
 @onready var scientist_button: TextureButton = $MarginContainer/VBoxContainer/BottomHBoxContainer/ComputerScientistVBoxContainer/CompurterScientistButton
 
-const victory_scene: PackedScene = preload("res://scenes/victory.tscn")
-const lose_scene: PackedScene    = preload("res://scenes/lose.tscn")
+const victory_scene: PackedScene = preload("res://scenes/screens/victory.tscn")
+const lose_scene: PackedScene    = preload("res://scenes/screens/lose.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

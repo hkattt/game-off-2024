@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var text_box: MarginContainer = $TextBox
 
-const game_scene: PackedScene = preload("res://scenes/game.tscn")
+const game_scene: PackedScene = preload("res://scenes/screens/game.tscn")
 
 var story_text: String
 
