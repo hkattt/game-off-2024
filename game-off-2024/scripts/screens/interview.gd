@@ -1,9 +1,6 @@
 extends Node2D
 
-enum InterviewState {
-	RUNNING,
-	COMPLETE
-}
+signal interview_finished
 
 @onready var text_box: MarginContainer      = $TextBox
 @onready var character_name: Label          = $CharacterName
@@ -13,10 +10,8 @@ const Minigame = preload("res://scripts/minigames/minigame.gd")
 
 var character_scene: PackedScene
 var minigame_scene: PackedScene
-
 var dialogue_manager: Node2D
 
-var interview_state: InterviewState = InterviewState.RUNNING
 var level: Minigame.Level = Minigame.Level.EASY
 
 # Called when the node enters the scene tree for the first time.
@@ -54,7 +49,7 @@ func _process(delta: float) -> void:
 			if level == Minigame.Level.COMPLETE:
 				# Sleep for 5 seconds
 				await get_tree().create_timer(5).timeout
-				interview_state = InterviewState.COMPLETE 
+				interview_finished.emit()
 			else:	
 				# Instantiate the next level
 				instantiate_minigame(level)		
@@ -93,6 +88,3 @@ func instantiate_minigame(level: Minigame.Level):
 	# Add the minigame node as a child node of the minigame viewport
 	minigame_viewport.add_child(minigame)
 	minigame.start_game()
-	
-func is_over() -> bool:
-	return interview_state == InterviewState.COMPLETE

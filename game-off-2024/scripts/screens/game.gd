@@ -15,30 +15,15 @@ enum Character {
 
 var character: Character = Character.CHILD
 
+var interview_switching: bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
 	instantiate_interview(character)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if has_node("Interview"):
-		var interview: Node2D = get_node("Interview")
-		
-		if interview.is_over():
-			interview.queue_free()
-			dialogue_manager.next_character()
-			character = next_character(character)
-			# Checks if all the characters have been interviewed
-			if character == Character.DONE:
-				# Switches to the accusation scene (i.e. pick the killer)
-				await FadeWindow.fade_out()
-				get_tree().change_scene_to_packed(accusation_scene)
-				await FadeWindow.fade_in()
-			else:
-				# Starts the next interview
-				await FadeWindow.fade_out()
-				instantiate_interview(character)
-				await FadeWindow.fade_in()
+	pass
 
 func instantiate_interview(character: Character):
 	# Path to character scene and minigame scene
@@ -49,7 +34,7 @@ func instantiate_interview(character: Character):
 	var interview: Node2D = interview_scene.instantiate()
 	# Rename the node
 	interview.name = "Interview"
-	
+	interview.interview_finished.connect(_on_interview_finished)
 	interview.set_character(character_scene_path)
 	interview.set_minigame(character_minigame_scene_path)
 	add_child(interview)
@@ -85,3 +70,20 @@ func character_scene_path(character: Character) -> String:
 func character_minigame_scene_path(character: Character) -> String:
 	var character_string: String = character_to_string(character)
 	return "res://scenes/minigames/" + character_string + "/" + character_string + "_minigame.tscn"
+	
+func _on_interview_finished():
+	if has_node("Interview"):
+		var interview: Node2D = get_node("Interview")
+		await FadeWindow.fade_out()
+		interview.free()
+		
+		dialogue_manager.next_character()
+		character = next_character(character)
+		# Checks if all the characters have been interviewed
+		if character == Character.DONE:
+			# Switches to the accusation scene (i.e. pick the killer)
+			get_tree().change_scene_to_packed(accusation_scene)
+		else:
+			# Starts the next interview
+			instantiate_interview(character)
+		await FadeWindow.fade_in()
