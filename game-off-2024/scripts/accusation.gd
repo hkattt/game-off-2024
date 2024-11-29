@@ -10,7 +10,7 @@ const lose_scene: PackedScene    = preload("res://scenes/lose.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -18,12 +18,16 @@ func _process(delta: float) -> void:
 
 func _on_child_button_button_up() -> void:
 	get_tree().change_scene_to_packed(victory_scene)
+	SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)	
 
 func _on_doctor_button_button_up() -> void:
 	get_tree().change_scene_to_packed(lose_scene)
+	SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)
 
 func _on_chef_button_button_up() -> void:
 	get_tree().change_scene_to_packed(lose_scene)
+	SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)
 
 func _on_scientist_button_button_up() -> void:
 	get_tree().change_scene_to_packed(lose_scene)
+	SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)

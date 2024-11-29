@@ -71,8 +71,8 @@ func _on_diagnosis_3_button_up() -> void:
 
 func check_guess(button: Button) -> void:
 	if button.text == correct_diagnosis:
-		correct_sound.play()
+		SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)
 		won_game()
 	else:
-		wrong_sound.play()
+		SoundManager.play_sound(SoundManager.Sound.WRONG)
 		lose_game()

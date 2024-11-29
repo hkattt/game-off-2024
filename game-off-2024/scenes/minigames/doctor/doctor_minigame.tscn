@@ -1,9 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://ck5id71nprqt3"]
+[gd_scene load_steps=5 format=3 uid="uid://ck5id71nprqt3"]
 
 [ext_resource type="Script" path="res://scripts/minigames/doctor/doctor_minigame.gd" id="1_2q7ea"]
 [ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="2_7bcpl"]
-[ext_resource type="AudioStream" uid="uid://bpnxwb36b27ix" path="res://assets/sound/correct.mp3" id="3_1q6k8"]
-[ext_resource type="AudioStream" uid="uid://obb3svp6fwsi" path="res://assets/sound/wrong.mp3" id="4_r3shd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0u0n"]
 bg_color = Color(0.741176, 0.647059, 0.513726, 1)
@@ -168,12 +166,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/normal = SubResource("StyleBoxFlat_54iay")
 text = "Diagnosis 1
 "
-
-[node name="CorrectSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_1q6k8")
-
-[node name="WrongSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_r3shd")
 
 [connection signal="button_up" from="MarginContainer/VBoxContainer/DiagnosisHBoxContainer/Diagnosis 1" to="." method="_on_diagnosis_1_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/DiagnosisHBoxContainer/Diagnosis 2" to="." method="_on_diagnosis_2_button_up"]

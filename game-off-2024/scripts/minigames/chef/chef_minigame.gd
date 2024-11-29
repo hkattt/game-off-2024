@@ -35,6 +35,7 @@ func _process(delta: float) -> void:
 		food_timer = food_spawn_rate
 		
 	if win_timer <= 0:
+		SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)
 		won_game()
 
 func set_spawn_rate() -> void:

@@ -13,17 +13,11 @@ enum Character {
 
 @onready var dialogue_manager: Node2D = $DialogueManager
 
-@onready var child_background_music: AudioStreamPlayer2D     = $ChildBackgroundMusic
-@onready var doctor_background_music: AudioStreamPlayer2D    = $DoctorBackgroundMusic
-@onready var scientist_background_music: AudioStreamPlayer2D = $ScientistBackgroundMusic4
-@onready var chef_background_music: AudioStreamPlayer2D      = $ChefBackgroundMusic
-
 var character: Character = Character.CHILD
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
 	instantiate_interview(character)
-	play_background_music(character)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -33,7 +27,6 @@ func _process(delta: float) -> void:
 		if interview.is_over():
 			interview.free()
 			dialogue_manager.next_character()
-			stop_background_music(character)
 			character = next_character(character)
 			# Checks if all the characters have been interviewed
 			if character == Character.DONE:
@@ -42,7 +35,6 @@ func _process(delta: float) -> void:
 			else:
 				# Starts the next interview
 				instantiate_interview(character)
-				play_background_music(character)
 
 func instantiate_interview(character: Character):
 	# Path to character scene and minigame scene
@@ -81,22 +73,6 @@ func character_to_index(character: Character) -> int:
 		Character.CHEF:      return 2
 		Character.SCIENTIST: return 3
 		_:                   return -1
-
-func play_background_music(character: Character) -> void:
-	match character:
-		Character.CHILD:     child_background_music.play()
-		Character.DOCTOR:    doctor_background_music.play()
-		Character.CHEF:      chef_background_music.play()
-		Character.SCIENTIST: scientist_background_music.play()
-		_:                   pass
-		
-func stop_background_music(character: Character) -> void:
-	match character:
-		Character.CHILD:     child_background_music.stop()
-		Character.DOCTOR:    doctor_background_music.stop()
-		Character.CHEF:      chef_background_music.stop()
-		Character.SCIENTIST: scientist_background_music.stop()
-		_:                   pass
 	
 func character_scene_path(character: Character) -> String:
 	var character_string: String = character_to_string(character)

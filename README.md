@@ -25,7 +25,10 @@ This game was made using Godot 4 and GDScript for [GitHub Game Off 2024](https:/
 7. Player jump SDX: https://freesound.org/people/greenvwbeetle/sounds/244657/
 8. Death SFX: https://freesound.org/people/LiamG_SFX/sounds/322497/
 9. Correct SFX: https://freesound.org/people/StavSounds/sounds/546083/
-10. Wrong SFX: https://freesound.org/people/sophieciruela/sounds/634449/
+10. Wrong SFX: https://freesound.org/people/greenvwbeetle/sounds/328119/ 
+11. Click SFX: https://freesound.org/people/Jaszunio15/sounds/421390/
+12. Crunch SFX: https://freesound.org/people/theplax/sounds/608645/
 
 ## Code References
 1. Text Box: https://www.youtube.com/watch?v=QEHOiORnXIk 
+2. Global audio player: https://www.youtube.com/watch?v=lILnUD3xph8

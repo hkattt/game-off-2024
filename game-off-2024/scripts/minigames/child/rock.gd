@@ -1,13 +1,14 @@
 extends Area2D
 
-@onready var death_sound: AudioStreamPlayer2D = $DeathSound
 
 var minigame: Node2D
+var death_sound: AudioStreamPlayer2D
 
 var speed: float = 200
 
 func _ready() -> void:
 	minigame = get_parent()
+	death_sound = minigame.get_node("DeathSound")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -18,6 +19,6 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body):
 	if body is CharacterBody2D:
-		death_sound.play()
+		SoundManager.play_sound(SoundManager.Sound.DEATH)
 		minigame.lose_game()
 		queue_free()

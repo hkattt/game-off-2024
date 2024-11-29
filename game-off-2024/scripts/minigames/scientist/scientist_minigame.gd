@@ -64,21 +64,19 @@ func set_challenge_index() -> void:
 			challenge_index = -1
 
 func _on_next_element_1_button_up() -> void:
-	if next1.text == correct_next:
-		won_game()
-	else:
-		lose_game()
-
+	check_guess(next1)
 
 func _on_next_element_2_button_up() -> void:
-	if next2.text == correct_next:
-		won_game()
-	else:
-		lose_game()
+	check_guess(next2)
 
 
 func _on_next_element_3_button_up() -> void:
-	if next3.text == correct_next:
+	check_guess(next3)
+		
+func check_guess(button: Button) -> void:
+	if button.text == correct_next:
+		SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)
 		won_game()
 	else:
+		SoundManager.play_sound(SoundManager.Sound.WRONG)
 		lose_game()

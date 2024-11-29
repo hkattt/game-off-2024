@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnx1woj07juxu"]
+[gd_scene load_steps=3 format=3 uid="uid://dnx1woj07juxu"]
 
 [ext_resource type="Script" path="res://scripts/minigames/child/player.gd" id="1_7d8hc"]
-[ext_resource type="AudioStream" uid="uid://bhv8vy8m1oqkv" path="res://assets/sound/pop.mp3" id="2_4y5lu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_igdaw"]
 size = Vector2(16, 16)
@@ -17,7 +16,3 @@ shape = SubResource("RectangleShape2D_igdaw")
 offset_right = 16.0
 offset_bottom = 16.0
 color = Color(0.317647, 0.286275, 0.211765, 1)
-
-[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_4y5lu")
-parameters/looping = false
