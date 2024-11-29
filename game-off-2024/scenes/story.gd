@@ -5,7 +5,7 @@ extends Node2D
 const game_scene: PackedScene = preload("res://scenes/game.tscn")
 
 var story_text: String
-var read_timer: float = 60.0
+var read_timer: float = 40.0
 
 func _ready() -> void:
 	load_story("res://assets/story-introduction.txt") 
