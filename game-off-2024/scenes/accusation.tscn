@@ -44,6 +44,7 @@ theme_override_constants/separation = 10
 [node name="ChildButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopHBoxContainer/ChildVBoxContainer"]
 texture_filter = 1
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("2_tew3k")
 texture_pressed = ExtResource("2_tew3k")
@@ -66,6 +67,7 @@ theme_override_constants/separation = 10
 [node name="DoctorButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopHBoxContainer/DoctorVBoxContainer"]
 texture_filter = 1
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("3_cor4i")
 texture_pressed = ExtResource("3_cor4i")
@@ -93,6 +95,7 @@ theme_override_constants/separation = 10
 [node name="ChefButton" type="TextureButton" parent="MarginContainer/VBoxContainer/BottomHBoxContainer/ChefVBoxContainer"]
 texture_filter = 1
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("4_tyntc")
 texture_pressed = ExtResource("4_tyntc")
@@ -115,6 +118,7 @@ theme_override_constants/separation = 10
 [node name="ScientistButton" type="TextureButton" parent="MarginContainer/VBoxContainer/BottomHBoxContainer/ScientistVBoxContainer"]
 texture_filter = 1
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("3_cor4i")
 texture_pressed = ExtResource("3_cor4i")
