@@ -3,7 +3,7 @@ extends Node2D
 @onready var child_button: TextureButton     = $MarginContainer/VBoxContainer/TopHBoxContainer/ChildVBoxContainer/ChildButton
 @onready var doctor_button: TextureButton    = $MarginContainer/VBoxContainer/TopHBoxContainer/DoctorVBoxContainer/DoctorButton
 @onready var chef_button: TextureButton      = $MarginContainer/VBoxContainer/BottomHBoxContainer/ChefVBoxContainer/ChefButton
-@onready var scientist_button: TextureButton = $MarginContainer/VBoxContainer/BottomHBoxContainer/ScientistVBoxContainer/ScientistButton
+@onready var scientist_button: TextureButton = $MarginContainer/VBoxContainer/BottomHBoxContainer/ComputerScientistVBoxContainer/CompurterScientistButton
 
 const victory_scene: PackedScene = preload("res://scenes/victory.tscn")
 const lose_scene: PackedScene    = preload("res://scenes/lose.tscn")

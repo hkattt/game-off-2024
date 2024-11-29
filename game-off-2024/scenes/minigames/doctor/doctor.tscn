@@ -4,5 +4,3 @@
 
 [node name="Doctor" type="Sprite2D"]
 texture = ExtResource("1_78vjn")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]

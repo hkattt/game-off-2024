@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://mg1grb8t25fv"]
 
-[ext_resource type="Script" path="res://scripts/minigames/scientist/scientist_minigame.gd" id="1_uk7b2"]
-[ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="2_l0ga0"]
+[ext_resource type="Script" path="res://scripts/minigames/computer-scientist/computer_scientist_minigame.gd" id="1_mplkp"]
+[ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="2_tu55l"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0u0n"]
 bg_color = Color(0.741176, 0.647059, 0.513726, 1)
@@ -35,8 +35,8 @@ expand_margin_top = 1.0
 expand_margin_right = 1.0
 expand_margin_bottom = 1.0
 
-[node name="DoctorMinigame" type="Node2D"]
-script = ExtResource("1_uk7b2")
+[node name="ComputerScientistMinigame" type="Node2D"]
+script = ExtResource("1_mplkp")
 
 [node name="Window" type="ColorRect" parent="."]
 visible = false
@@ -61,7 +61,7 @@ alignment = 1
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_l0ga0")
+theme_override_fonts/font = ExtResource("2_tu55l")
 text = "Pattern"
 horizontal_alignment = 1
 
@@ -74,49 +74,49 @@ alignment = 1
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_l0ga0")
+theme_override_fonts/font = ExtResource("2_tu55l")
 text = "1"
 
 [node name="Element 2" type="Label" parent="MarginContainer/VBoxContainer/SequenceHBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_l0ga0")
+theme_override_fonts/font = ExtResource("2_tu55l")
 text = "2"
 
 [node name="Element 3" type="Label" parent="MarginContainer/VBoxContainer/SequenceHBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_l0ga0")
+theme_override_fonts/font = ExtResource("2_tu55l")
 text = "3"
 
 [node name="Element 4" type="Label" parent="MarginContainer/VBoxContainer/SequenceHBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_l0ga0")
+theme_override_fonts/font = ExtResource("2_tu55l")
 text = "4"
 
 [node name="Element 5" type="Label" parent="MarginContainer/VBoxContainer/SequenceHBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_l0ga0")
+theme_override_fonts/font = ExtResource("2_tu55l")
 text = "5"
 
 [node name="Element 6" type="Label" parent="MarginContainer/VBoxContainer/SequenceHBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_l0ga0")
+theme_override_fonts/font = ExtResource("2_tu55l")
 text = "6"
 
 [node name="MissingElement" type="Label" parent="MarginContainer/VBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_l0ga0")
+theme_override_fonts/font = ExtResource("2_tu55l")
 text = "Missing Element "
 horizontal_alignment = 1
 
@@ -134,7 +134,7 @@ theme_override_colors/font_hover_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_focus_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_l0ga0")
+theme_override_fonts/font = ExtResource("2_tu55l")
 theme_override_styles/focus = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_e0u0n")
@@ -154,7 +154,7 @@ theme_override_colors/font_hover_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_focus_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_l0ga0")
+theme_override_fonts/font = ExtResource("2_tu55l")
 theme_override_styles/focus = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_e0u0n")
@@ -174,7 +174,7 @@ theme_override_colors/font_hover_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_focus_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_l0ga0")
+theme_override_fonts/font = ExtResource("2_tu55l")
 theme_override_styles/focus = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_e0u0n")

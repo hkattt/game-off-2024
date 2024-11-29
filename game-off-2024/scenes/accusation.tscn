@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://khbsfu8osnus"]
+[gd_scene load_steps=7 format=3 uid="uid://khbsfu8osnus"]
 
 [ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="1_b2jg4"]
 [ext_resource type="Script" path="res://scripts/accusation.gd" id="1_emqx3"]
 [ext_resource type="Texture2D" uid="uid://dekotuv2ccpvr" path="res://assets/minigames/child/child.png" id="2_tew3k"]
 [ext_resource type="Texture2D" uid="uid://bw4mdwexlhw3q" path="res://assets/minigames/doctor/doctor.png" id="3_cor4i"]
 [ext_resource type="Texture2D" uid="uid://267yj8mmwhh1" path="res://assets/minigames/chef/chef.png" id="4_tyntc"]
+[ext_resource type="Texture2D" uid="uid://bbnd1yovc3guw" path="res://assets/minigames/computer-scientist/computer-scientist.png" id="6_1wxhv"]
 
 [node name="Accusation" type="Node2D"]
 script = ExtResource("1_emqx3")
@@ -111,22 +112,22 @@ theme_override_fonts/font = ExtResource("1_b2jg4")
 text = "Patrica"
 horizontal_alignment = 1
 
-[node name="ScientistVBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/BottomHBoxContainer"]
+[node name="ComputerScientistVBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/BottomHBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="ScientistButton" type="TextureButton" parent="MarginContainer/VBoxContainer/BottomHBoxContainer/ScientistVBoxContainer"]
+[node name="CompurterScientistButton" type="TextureButton" parent="MarginContainer/VBoxContainer/BottomHBoxContainer/ComputerScientistVBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource("3_cor4i")
-texture_pressed = ExtResource("3_cor4i")
-texture_hover = ExtResource("3_cor4i")
-texture_focused = ExtResource("3_cor4i")
+texture_normal = ExtResource("6_1wxhv")
+texture_pressed = ExtResource("6_1wxhv")
+texture_hover = ExtResource("6_1wxhv")
+texture_focused = ExtResource("6_1wxhv")
 stretch_mode = 3
 
-[node name="ScientistName" type="Label" parent="MarginContainer/VBoxContainer/BottomHBoxContainer/ScientistVBoxContainer"]
+[node name="ComputerScientistName" type="Label" parent="MarginContainer/VBoxContainer/BottomHBoxContainer/ComputerScientistVBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
@@ -137,4 +138,4 @@ horizontal_alignment = 1
 [connection signal="button_up" from="MarginContainer/VBoxContainer/TopHBoxContainer/ChildVBoxContainer/ChildButton" to="." method="_on_child_button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/TopHBoxContainer/DoctorVBoxContainer/DoctorButton" to="." method="_on_doctor_button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/BottomHBoxContainer/ChefVBoxContainer/ChefButton" to="." method="_on_chef_button_button_up"]
-[connection signal="button_up" from="MarginContainer/VBoxContainer/BottomHBoxContainer/ScientistVBoxContainer/ScientistButton" to="." method="_on_scientist_button_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/BottomHBoxContainer/ComputerScientistVBoxContainer/CompurterScientistButton" to="." method="_on_scientist_button_button_up"]

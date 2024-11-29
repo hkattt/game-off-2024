@@ -17,7 +17,7 @@ offset_bottom = 96.0
 
 [node name="Basket" parent="." instance=ExtResource("2_qiiy0")]
 z_index = 1
-position = Vector2(128, 80)
+position = Vector2(149, 89)
 
 [node name="LeftWall" type="StaticBody2D" parent="."]
 

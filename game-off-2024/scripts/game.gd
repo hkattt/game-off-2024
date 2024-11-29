@@ -63,7 +63,7 @@ func character_to_string(character: Character) -> String:
 		Character.CHILD:     return "child"
 		Character.DOCTOR:    return "doctor" 
 		Character.CHEF:      return "chef"
-		Character.SCIENTIST: return "scientist"
+		Character.SCIENTIST: return "computer_scientist"
 		_:                   return ""
 		
 func character_to_index(character: Character) -> int:

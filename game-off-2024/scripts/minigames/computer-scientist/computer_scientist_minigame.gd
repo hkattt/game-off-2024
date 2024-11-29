@@ -19,7 +19,7 @@ var challenge_index: int
 func _ready() -> void:
 	set_challenge_index()
 	
-	load_logic_challenges("res://assets/minigames/scientist/logic-challenges.json")
+	load_logic_challenges("res://assets/minigames/computer-scientist/logic-challenges.json")
 	
 	set_challenge()
 
