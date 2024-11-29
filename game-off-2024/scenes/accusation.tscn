@@ -40,6 +40,7 @@ alignment = 1
 
 [node name="ChildVBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TopHBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_constants/separation = 10
 
 [node name="ChildButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopHBoxContainer/ChildVBoxContainer"]
@@ -63,6 +64,7 @@ horizontal_alignment = 1
 
 [node name="DoctorVBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TopHBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_constants/separation = 10
 
 [node name="DoctorButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopHBoxContainer/DoctorVBoxContainer"]
@@ -91,6 +93,7 @@ alignment = 1
 
 [node name="ChefVBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/BottomHBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_constants/separation = 10
 
 [node name="ChefButton" type="TextureButton" parent="MarginContainer/VBoxContainer/BottomHBoxContainer/ChefVBoxContainer"]
@@ -114,6 +117,7 @@ horizontal_alignment = 1
 
 [node name="ComputerScientistVBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/BottomHBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_constants/separation = 10
 
 [node name="CompurterScientistButton" type="TextureButton" parent="MarginContainer/VBoxContainer/BottomHBoxContainer/ComputerScientistVBoxContainer"]
