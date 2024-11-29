@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmnyiqyg3g447"]
+[gd_scene load_steps=7 format=3 uid="uid://bmnyiqyg3g447"]
 
 [ext_resource type="Script" path="res://scripts/screens/story.gd" id="1_ls0p2"]
 [ext_resource type="PackedScene" uid="uid://dxuo3kk60cdkk" path="res://scenes/ui/text_box.tscn" id="2_an1l8"]
 [ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="3_w8y6o"]
+[ext_resource type="PackedScene" uid="uid://dc06uwosttc8y" path="res://scenes/minigames/child/child.tscn" id="4_rui8d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsic3"]
 bg_color = Color(0.741176, 0.647059, 0.513726, 1)
@@ -39,17 +40,13 @@ expand_margin_bottom = 1.0
 [node name="Story" type="Node2D"]
 script = ExtResource("1_ls0p2")
 
-[node name="TextBox" parent="." instance=ExtResource("2_an1l8")]
-offset_right = 320.0
-offset_bottom = 240.0
-
 [node name="NextButton" type="Button" parent="."]
 texture_filter = 3
 custom_minimum_size = Vector2(75, 0)
-offset_left = 240.0
-offset_top = 224.0
-offset_right = 315.0
-offset_bottom = 240.0
+offset_left = 239.0
+offset_top = 218.0
+offset_right = 314.0
+offset_bottom = 234.0
 theme_override_colors/font_hover_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_hover_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
@@ -65,5 +62,14 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_wsic3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_wsic3")
 theme_override_styles/normal = SubResource("StyleBoxFlat_qir4h")
 text = "Next"
+
+[node name="TextBox" parent="." instance=ExtResource("2_an1l8")]
+offset_left = 115.0
+offset_top = 40.0
+offset_right = 319.0
+offset_bottom = 180.0
+
+[node name="Child" parent="." instance=ExtResource("4_rui8d")]
+position = Vector2(65, 111)
 
 [connection signal="button_up" from="NextButton" to="." method="_on_next_button_button_up"]
