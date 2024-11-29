@@ -34,5 +34,5 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_fonts/font = ExtResource("1_kugo8")
 theme_override_font_sizes/font_size = 32
-text = "Press any button to start"
+text = "Press SPACE to start"
 horizontal_alignment = 1

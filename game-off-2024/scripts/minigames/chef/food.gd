@@ -12,6 +12,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	position.y += gravity * delta
 	
-	if position.y > 120:
+	if position.y > 100:
 		queue_free()
 		minigame.lose_game()
+		SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)

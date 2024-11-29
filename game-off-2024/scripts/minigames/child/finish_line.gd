@@ -16,5 +16,6 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body):
 	if body is CharacterBody2D:
+		SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)
 		minigame.won_game()
 		queue_free()

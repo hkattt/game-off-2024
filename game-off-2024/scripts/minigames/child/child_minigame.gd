@@ -2,6 +2,7 @@ extends "res://scripts/minigames/minigame.gd"
 
 # Player node
 @onready var player: Node2D = $Player
+
 # Obstacle scene
 @onready var obstacle_scene: PackedScene = preload("res://scenes/minigames/child/rock.tscn")
 # Finish line scene

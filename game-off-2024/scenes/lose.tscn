@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="2_l1ksb"]
 
-[node name="StartMenu" type="Node2D"]
+[node name="Lose" type="Node2D"]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 offset_right = 320.0

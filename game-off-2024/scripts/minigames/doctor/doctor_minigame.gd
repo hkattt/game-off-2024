@@ -8,6 +8,9 @@ extends "res://scripts/minigames/minigame.gd"
 @onready var diagnosis2: Button = $"MarginContainer/VBoxContainer/DiagnosisHBoxContainer/Diagnosis 2"
 @onready var diagnosis3: Button = $"MarginContainer/VBoxContainer/DiagnosisHBoxContainer/Diagnosis 3"
 
+@onready var correct_sound: AudioStreamPlayer2D = $CorrectSound
+@onready var wrong_sound: AudioStreamPlayer2D   = $WrongSound
+
 var diagnostic_challenges: Array = []
 var correct_diagnosis: String
 var challenge_index: int
@@ -58,19 +61,18 @@ func set_challenge_index() -> void:
 			challenge_index = -1
 
 func _on_diagnosis_1_button_up() -> void:
-	if diagnosis1.text == correct_diagnosis:
-		won_game()
-	else:
-		lose_game()
+	check_guess(diagnosis1)
 
 func _on_diagnosis_2_button_up() -> void:
-	if diagnosis2.text == correct_diagnosis:
-		won_game()
-	else:
-		lose_game()
+	check_guess(diagnosis2)
 
 func _on_diagnosis_3_button_up() -> void:
-	if diagnosis3.text == correct_diagnosis:
+	check_guess(diagnosis3)
+
+func check_guess(button: Button) -> void:
+	if button.text == correct_diagnosis:
+		SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)
 		won_game()
 	else:
+		SoundManager.play_sound(SoundManager.Sound.WRONG)
 		lose_game()
