@@ -1,9 +1,9 @@
 extends Node2D
 
-@onready var child_button       = $MarginContainer/VBoxContainer/TopHBoxContainer/ChildVBoxContainer/ChildButton
-@onready var doctor_button      = $MarginContainer/VBoxContainer/TopHBoxContainer/DoctorVBoxContainer/DoctorButton
-@onready var chef_button        = $MarginContainer/VBoxContainer/BottomHBoxContainer/ChefVBoxContainer/ChefButton
-@onready var scientist_button   = $MarginContainer/VBoxContainer/BottomHBoxContainer/ScientistVBoxContainer/ScientistButton
+@onready var child_button: TextureButton     = $MarginContainer/VBoxContainer/TopHBoxContainer/ChildVBoxContainer/ChildButton
+@onready var doctor_button: TextureButton    = $MarginContainer/VBoxContainer/TopHBoxContainer/DoctorVBoxContainer/DoctorButton
+@onready var chef_button: TextureButton      = $MarginContainer/VBoxContainer/BottomHBoxContainer/ChefVBoxContainer/ChefButton
+@onready var scientist_button: TextureButton = $MarginContainer/VBoxContainer/BottomHBoxContainer/ScientistVBoxContainer/ScientistButton
 
 const victory_scene: PackedScene = preload("res://scenes/victory.tscn")
 const lose_scene: PackedScene    = preload("res://scenes/lose.tscn")
@@ -14,7 +14,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	set_button_scale(child_button)
+	set_button_scale(doctor_button)
+	set_button_scale(chef_button)
+	set_button_scale(scientist_button)
+
+func set_button_scale(button: TextureButton) -> void:
+	if button.is_hovered():
+		button.scale = Vector2(1.1, 1.1)
+	else:
+		button.scale = Vector2(1, 1)
 
 func _on_child_button_button_up() -> void:
 	get_tree().change_scene_to_packed(lose_scene)

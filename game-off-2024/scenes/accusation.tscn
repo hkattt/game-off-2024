@@ -20,7 +20,7 @@ theme_override_constants/margin_bottom = 5
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/separation = 15
+theme_override_constants/separation = 10
 alignment = 1
 
 [node name="Instruction" type="Label" parent="MarginContainer/VBoxContainer"]
@@ -39,14 +39,17 @@ alignment = 1
 
 [node name="ChildVBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TopHBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="ChildButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopHBoxContainer/ChildVBoxContainer"]
 texture_filter = 1
 layout_mode = 2
+size_flags_vertical = 4
 texture_normal = ExtResource("2_tew3k")
 texture_pressed = ExtResource("2_tew3k")
 texture_hover = ExtResource("2_tew3k")
 texture_focused = ExtResource("2_tew3k")
+stretch_mode = 3
 
 [node name="ChildName" type="Label" parent="MarginContainer/VBoxContainer/TopHBoxContainer/ChildVBoxContainer"]
 texture_filter = 3
@@ -58,14 +61,17 @@ horizontal_alignment = 1
 
 [node name="DoctorVBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TopHBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="DoctorButton" type="TextureButton" parent="MarginContainer/VBoxContainer/TopHBoxContainer/DoctorVBoxContainer"]
 texture_filter = 1
 layout_mode = 2
+size_flags_vertical = 4
 texture_normal = ExtResource("3_cor4i")
 texture_pressed = ExtResource("3_cor4i")
 texture_hover = ExtResource("3_cor4i")
 texture_focused = ExtResource("3_cor4i")
+stretch_mode = 3
 
 [node name="DoctorName" type="Label" parent="MarginContainer/VBoxContainer/TopHBoxContainer/DoctorVBoxContainer"]
 texture_filter = 3
@@ -82,14 +88,17 @@ alignment = 1
 
 [node name="ChefVBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/BottomHBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="ChefButton" type="TextureButton" parent="MarginContainer/VBoxContainer/BottomHBoxContainer/ChefVBoxContainer"]
 texture_filter = 1
 layout_mode = 2
+size_flags_vertical = 4
 texture_normal = ExtResource("4_tyntc")
 texture_pressed = ExtResource("4_tyntc")
 texture_hover = ExtResource("4_tyntc")
 texture_focused = ExtResource("4_tyntc")
+stretch_mode = 3
 
 [node name="ChefName" type="Label" parent="MarginContainer/VBoxContainer/BottomHBoxContainer/ChefVBoxContainer"]
 texture_filter = 3
@@ -101,10 +110,12 @@ horizontal_alignment = 1
 
 [node name="ScientistVBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/BottomHBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="ScientistButton" type="TextureButton" parent="MarginContainer/VBoxContainer/BottomHBoxContainer/ScientistVBoxContainer"]
 texture_filter = 1
 layout_mode = 2
+size_flags_vertical = 4
 texture_normal = ExtResource("3_cor4i")
 texture_pressed = ExtResource("3_cor4i")
 texture_hover = ExtResource("3_cor4i")
@@ -116,7 +127,7 @@ texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_fonts/font = ExtResource("1_b2jg4")
-text = "Professor Vanth"
+text = "Prof. Vanth"
 horizontal_alignment = 1
 
 [connection signal="button_up" from="MarginContainer/VBoxContainer/TopHBoxContainer/ChildVBoxContainer/ChildButton" to="." method="_on_child_button_button_up"]

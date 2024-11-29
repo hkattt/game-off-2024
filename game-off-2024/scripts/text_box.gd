@@ -1,6 +1,6 @@
 extends MarginContainer
 
-const CHARACTER_READ_RATE: float = 0.05
+const CHARACTER_READ_RATE: float = 0.1
 
 @onready var start_symbol: Label                 = $MarginContainer/HBoxContainer/Start
 @onready var text: Label                         = $MarginContainer/HBoxContainer/Text
