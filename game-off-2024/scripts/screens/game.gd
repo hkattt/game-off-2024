@@ -25,16 +25,20 @@ func _process(delta: float) -> void:
 		var interview: Node2D = get_node("Interview")
 		
 		if interview.is_over():
-			interview.free()
+			interview.queue_free()
 			dialogue_manager.next_character()
 			character = next_character(character)
 			# Checks if all the characters have been interviewed
 			if character == Character.DONE:
 				# Switches to the accusation scene (i.e. pick the killer)
+				await FadeWindow.fade_out()
 				get_tree().change_scene_to_packed(accusation_scene)
+				await FadeWindow.fade_in()
 			else:
 				# Starts the next interview
+				await FadeWindow.fade_out()
 				instantiate_interview(character)
+				await FadeWindow.fade_in()
 
 func instantiate_interview(character: Character):
 	# Path to character scene and minigame scene

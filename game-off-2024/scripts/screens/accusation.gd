@@ -26,17 +26,19 @@ func set_button_scale(button: TextureButton) -> void:
 		button.scale = Vector2(1, 1)
 
 func _on_child_button_button_up() -> void:
-	get_tree().change_scene_to_packed(lose_scene)
-	SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)	
+	switch_scene(lose_scene)
 
 func _on_doctor_button_button_up() -> void:
-	get_tree().change_scene_to_packed(victory_scene)
-	SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)
+	switch_scene(victory_scene)
 
 func _on_chef_button_button_up() -> void:
-	get_tree().change_scene_to_packed(lose_scene)
-	SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)
+	switch_scene(lose_scene)
 
 func _on_scientist_button_button_up() -> void:
-	get_tree().change_scene_to_packed(lose_scene)
+	switch_scene(lose_scene)
+	
+func switch_scene(scene: PackedScene) -> void:
+	await FadeWindow.fade_out()
+	get_tree().change_scene_to_packed(scene)
+	await FadeWindow.fade_in()
 	SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)

@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 SoundManager="*res://scenes/managers/sound_manager.tscn"
 MusicManager="*res://scenes/managers/music_manager.tscn"
+FadeWindow="*res://scenes/fade_window.tscn"
 
 [display]
 

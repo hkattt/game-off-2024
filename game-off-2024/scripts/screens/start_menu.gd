@@ -10,4 +10,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)
+		await FadeWindow.fade_out()
 		get_tree().change_scene_to_packed(story_scene)
+		await FadeWindow.fade_in()

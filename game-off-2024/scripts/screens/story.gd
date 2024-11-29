@@ -17,5 +17,7 @@ func load_story(file_path: String) -> void:
 		print("File does not exist")
 
 func _on_next_button_button_up() -> void:
+	await FadeWindow.fade_out()
 	get_tree().change_scene_to_packed(game_scene)
+	await FadeWindow.fade_in()
 	SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)
