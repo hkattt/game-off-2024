@@ -1,10 +1,9 @@
-extends CanvasLayer
+extends MarginContainer
 
 const CHARACTER_READ_RATE: float = 0.05
 
-@onready var text_box_container: MarginContainer = $TextBoxContainer
-@onready var start_symbol: Label                 = $TextBoxContainer/MarginContainer/HBoxContainer/Start
-@onready var text: Label                         = $TextBoxContainer/MarginContainer/HBoxContainer/Text
+@onready var start_symbol: Label                 = $MarginContainer/HBoxContainer/Start
+@onready var text: Label                         = $MarginContainer/HBoxContainer/Text
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,11 +13,11 @@ func _ready() -> void:
 func hide_text_box() -> void:
 	start_symbol.text = ""
 	text.text         = ""
-	text_box_container.hide()
+	hide()
 	
 func show_text_box() -> void:
 	start_symbol.text = "*"
-	text_box_container.show()
+	show()
 
 func set_text(new_text: String) -> void:
 	text.text = new_text

@@ -1,9 +1,9 @@
 extends Node2D
 
-@onready var child_button       = $MarginContainer/VBoxContainer/BottomHBoxContainer/ChildButton
-@onready var doctor_button      = $MarginContainer/VBoxContainer/BottomHBoxContainer/DoctorButton
-@onready var chef_button        = $MarginContainer/VBoxContainer/TopHBoxContainer/ChefButton
-@onready var scientist_button   = $MarginContainer/VBoxContainer/TopHBoxContainer/ScientistButton
+@onready var child_button       = $MarginContainer/VBoxContainer/TopHBoxContainer/ChildVBoxContainer/ChildButton
+@onready var doctor_button      = $MarginContainer/VBoxContainer/TopHBoxContainer/DoctorVBoxContainer/DoctorButton
+@onready var chef_button        = $MarginContainer/VBoxContainer/BottomHBoxContainer/ChefVBoxContainer/ChefButton
+@onready var scientist_button   = $MarginContainer/VBoxContainer/BottomHBoxContainer/ScientistVBoxContainer/ScientistButton
 
 const victory_scene: PackedScene = preload("res://scenes/victory.tscn")
 const lose_scene: PackedScene    = preload("res://scenes/lose.tscn")
