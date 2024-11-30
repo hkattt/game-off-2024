@@ -1,29 +1,38 @@
-[gd_scene load_steps=2 format=3 uid="uid://bidmb6514rcp5"]
+[gd_scene load_steps=3 format=3 uid="uid://cgaxipt6q2sph"]
 
+[ext_resource type="Texture2D" uid="uid://y8b50lq2kmdm" path="res://assets/newspaper.png.png" id="1_y6rim"]
 [ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="2_l1ksb"]
 
 [node name="Lose" type="Node2D"]
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-offset_right = 320.0
-offset_bottom = 240.0
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
+[node name="Newspaper" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(160, 121)
+texture = ExtResource("1_y6rim")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-size_flags_vertical = 4
-theme_override_constants/separation = 50
-
-[node name="LoseMessage" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="BreakingNews" type="Label" parent="."]
 texture_filter = 3
 custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
+offset_left = 61.0
+offset_top = 73.0
+offset_right = 253.0
+offset_bottom = 123.0
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_fonts/font = ExtResource("2_l1ksb")
 theme_override_font_sizes/font_size = 32
-text = "That was not the killer! Would you like to try again?"
+text = "BREAKING NEWS"
 horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Description" type="Label" parent="."]
+texture_filter = 3
+custom_minimum_size = Vector2(50, 50)
+offset_left = 62.0
+offset_top = 137.0
+offset_right = 186.0
+offset_bottom = 219.0
+theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_fonts/font = ExtResource("2_l1ksb")
+theme_override_font_sizes/font_size = 16
+text = "Ms. Grey's killer is still on the loose. The investigation remains open. "
 autowrap_mode = 3

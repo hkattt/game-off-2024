@@ -3,4 +3,5 @@
 [ext_resource type="Texture2D" uid="uid://bbnd1yovc3guw" path="res://assets/minigames/computer-scientist/computer-scientist.png" id="2_13xid"]
 
 [node name="ComputerScientist" type="Sprite2D"]
+texture_filter = 1
 texture = ExtResource("2_13xid")
