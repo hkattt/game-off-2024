@@ -22,10 +22,11 @@ func load_story(file_path: String) -> void:
 func _on_next_button_button_up() -> void:
 	line_index += 1 
 	
+	SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)
+	
 	if line_index < story_lines.size():
 		text_box.set_text(story_lines[line_index])
 	else:
 		await FadeWindow.fade_out()
 		get_tree().change_scene_to_packed(game_scene)
 		await FadeWindow.fade_in()
-		SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)

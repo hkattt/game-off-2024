@@ -108,6 +108,7 @@ alignment = 1
 texture_filter = 3
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
+focus_mode = 0
 theme_override_colors/font_hover_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_hover_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
@@ -129,6 +130,7 @@ text = "Diagnosis 1
 texture_filter = 3
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
+focus_mode = 0
 theme_override_colors/font_hover_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_hover_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
@@ -143,13 +145,14 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/normal = SubResource("StyleBoxFlat_54iay")
-text = "Diagnosis 1
+text = "Diagnosis 2
 "
 
 [node name="Diagnosis 3" type="Button" parent="MarginContainer/VBoxContainer/DiagnosisHBoxContainer"]
 texture_filter = 3
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
+focus_mode = 0
 theme_override_colors/font_hover_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_hover_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
@@ -164,7 +167,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/normal = SubResource("StyleBoxFlat_54iay")
-text = "Diagnosis 1
+text = "Diagnosis 3
 "
 
 [connection signal="button_up" from="MarginContainer/VBoxContainer/DiagnosisHBoxContainer/Diagnosis 1" to="." method="_on_diagnosis_1_button_up"]
