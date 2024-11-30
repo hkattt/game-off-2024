@@ -3,7 +3,7 @@ extends Node2D
 signal interview_finished
 
 @onready var text_box: MarginContainer      = $TextBox
-@onready var character_name: Label          = $CharacterName
+@onready var character_name: Panel          = $CharacterName
 @onready var minigame_viewport: SubViewport = $MinigamePanel/SubViewportContainer/SubViewport
 
 const Minigame = preload("res://scripts/minigames/minigame.gd")
@@ -17,7 +17,7 @@ var level: Minigame.Level = Minigame.Level.EASY
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
 	dialogue_manager = get_parent().get_node("DialogueManager")
-	character_name.text = dialogue_manager.get_character()
+	character_name.set_character_name(dialogue_manager.get_character())
 	text_box.set_text(dialogue_manager.get_opening_line())
 	instantiate_character()
 	instantiate_minigame(level)
