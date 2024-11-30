@@ -16,12 +16,15 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [node name="TextBoxContainer" type="MarginContainer"]
+custom_minimum_size = Vector2(100, 100)
 offset_right = 160.0
 offset_bottom = 140.0
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 20
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
 script = ExtResource("1_t46qd")
 
 [node name="Panel" type="Panel" parent="."]

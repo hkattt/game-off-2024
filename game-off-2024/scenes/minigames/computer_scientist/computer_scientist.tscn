@@ -4,4 +4,5 @@
 
 [node name="ComputerScientist" type="Sprite2D"]
 texture_filter = 1
+position = Vector2(32, 32)
 texture = ExtResource("2_13xid")

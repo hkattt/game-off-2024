@@ -2,9 +2,10 @@ extends Node2D
 
 signal interview_finished
 
-@onready var text_box: MarginContainer      = $TextBox
-@onready var character_name: Panel          = $CharacterName
-@onready var minigame_viewport: SubViewport = $MinigamePanel/SubViewportContainer/SubViewport
+@onready var text_box: MarginContainer         = $MarginContainer/HBoxContainer/TextBox
+@onready var centre_container: CenterContainer = $MarginContainer/HBoxContainer/VBoxContainer/CenterContainer
+@onready var character_name: Panel             = $MarginContainer/HBoxContainer/VBoxContainer/CharacterName
+@onready var minigame_viewport: SubViewport    = $MinigamePanel/SubViewportContainer/SubViewport
 
 const Minigame = preload("res://scripts/minigames/minigame.gd")
 
@@ -67,9 +68,9 @@ func instantiate_character():
 	# Rename the node
 	character.name = "Character"
 	# Position the character
-	character.position = Vector2(100.0, 70.0)
+	# character.position = Vector2(100.0, 70.0)
 	# Add the character as a child node
-	add_child(character)
+	centre_container.add_child(character)
 		
 func set_minigame(minigame_scene_path: String):
 	# Load the minigame scene

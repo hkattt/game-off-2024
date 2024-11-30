@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/screens/story.gd" id="1_ls0p2"]
 [ext_resource type="PackedScene" uid="uid://dxuo3kk60cdkk" path="res://scenes/ui/text_box.tscn" id="2_an1l8"]
 [ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="3_w8y6o"]
-[ext_resource type="PackedScene" uid="uid://dc06uwosttc8y" path="res://scenes/minigames/child/child.tscn" id="4_rui8d"]
+[ext_resource type="PackedScene" uid="uid://c50veuqrn6ufg" path="res://scenes/chief.tscn" id="4_lqfed"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsic3"]
 bg_color = Color(0.741176, 0.647059, 0.513726, 1)
@@ -70,7 +70,7 @@ offset_top = 40.0
 offset_right = 319.0
 offset_bottom = 180.0
 
-[node name="Child" parent="." instance=ExtResource("4_rui8d")]
-position = Vector2(65, 111)
+[node name="Chief" parent="." instance=ExtResource("4_lqfed")]
+position = Vector2(57, 109)
 
 [connection signal="button_up" from="NextButton" to="." method="_on_next_button_button_up"]

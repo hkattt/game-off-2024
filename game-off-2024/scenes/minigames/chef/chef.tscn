@@ -4,4 +4,5 @@
 
 [node name="Chef" type="Sprite2D"]
 texture_filter = 3
+position = Vector2(32, 32)
 texture = ExtResource("1_xdn5l")
