@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy2wlk25kk4wf"]
+[gd_scene load_steps=5 format=3 uid="uid://cy2wlk25kk4wf"]
 
 [ext_resource type="Texture2D" uid="uid://y8b50lq2kmdm" path="res://assets/newspaper.png.png" id="2_mo5pc"]
 [ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="2_nvc7u"]
 [ext_resource type="PackedScene" uid="uid://clj2cx15h7sq" path="res://scenes/minigames/doctor/doctor.tscn" id="3_boxpp"]
+[ext_resource type="PackedScene" uid="uid://dj456m2eant0h" path="res://scenes/ui/main_menu_button.tscn" id="4_vla7a"]
 
 [node name="Victory" type="Node2D"]
 
@@ -41,3 +42,5 @@ autowrap_mode = 3
 [node name="Doctor" parent="." instance=ExtResource("3_boxpp")]
 position = Vector2(239, 165)
 scale = Vector2(1.21875, 1.21875)
+
+[node name="MainMenuButton" parent="." instance=ExtResource("4_vla7a")]

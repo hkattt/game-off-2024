@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgaxipt6q2sph"]
+[gd_scene load_steps=5 format=3 uid="uid://cgaxipt6q2sph"]
 
 [ext_resource type="Texture2D" uid="uid://y8b50lq2kmdm" path="res://assets/newspaper.png.png" id="1_y6rim"]
 [ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="2_l1ksb"]
 [ext_resource type="PackedScene" uid="uid://dayyo42tlfn7n" path="res://scenes/ms_grey.tscn" id="3_lojbj"]
+[ext_resource type="PackedScene" uid="uid://dj456m2eant0h" path="res://scenes/ui/main_menu_button.tscn" id="4_km75t"]
 
 [node name="Lose" type="Node2D"]
 
@@ -41,3 +42,5 @@ autowrap_mode = 3
 [node name="MsGrey" parent="." instance=ExtResource("3_lojbj")]
 position = Vector2(239, 169)
 scale = Vector2(1.09961, 1.09961)
+
+[node name="MainMenuButton" parent="." instance=ExtResource("4_km75t")]

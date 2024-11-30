@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://dj456m2eant0h"]
+
+[ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="1_fqq0w"]
+[ext_resource type="Script" path="res://scripts/ui/main_menu_button.gd" id="2_1phw7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqqpl"]
+bg_color = Color(0.741176, 0.647059, 0.513726, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.164706, 0.141176, 0.117647, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7th6f"]
+bg_color = Color(0.803922, 0.72549, 0.580392, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.164706, 0.141176, 0.117647, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[node name="MainMenuButton" type="Button"]
+texture_filter = 3
+custom_minimum_size = Vector2(75, 0)
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 85.0
+offset_bottom = 26.0
+focus_mode = 0
+theme_override_colors/font_hover_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_colors/font_hover_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_colors/font_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_colors/font_focus_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_fonts/font = ExtResource("1_fqq0w")
+theme_override_styles/focus = SubResource("StyleBoxFlat_nqqpl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_nqqpl")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_nqqpl")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_nqqpl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nqqpl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_nqqpl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nqqpl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7th6f")
+text = "Main Menu"
+script = ExtResource("2_1phw7")
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]
