@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgaxipt6q2sph"]
+[gd_scene load_steps=4 format=3 uid="uid://cgaxipt6q2sph"]
 
 [ext_resource type="Texture2D" uid="uid://y8b50lq2kmdm" path="res://assets/newspaper.png.png" id="1_y6rim"]
 [ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="2_l1ksb"]
+[ext_resource type="PackedScene" uid="uid://dayyo42tlfn7n" path="res://scenes/ms_grey.tscn" id="3_lojbj"]
 
 [node name="Lose" type="Node2D"]
 
@@ -36,3 +37,7 @@ theme_override_fonts/font = ExtResource("2_l1ksb")
 theme_override_font_sizes/font_size = 16
 text = "Ms. Grey's killer is still on the loose. The investigation remains open. "
 autowrap_mode = 3
+
+[node name="MsGrey" parent="." instance=ExtResource("3_lojbj")]
+position = Vector2(239, 169)
+scale = Vector2(1.09961, 1.09961)

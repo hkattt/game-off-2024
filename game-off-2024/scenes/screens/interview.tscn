@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://icur8t27smy"]
+[gd_scene load_steps=5 format=3 uid="uid://dpnvyxjj1lo4c"]
 
 [ext_resource type="Script" path="res://scripts/screens/interview.gd" id="1_uysn5"]
 [ext_resource type="PackedScene" uid="uid://dxuo3kk60cdkk" path="res://scenes/ui/text_box.tscn" id="2_qk33r"]
