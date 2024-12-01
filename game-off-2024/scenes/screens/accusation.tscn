@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://khbsfu8osnus"]
+[gd_scene load_steps=8 format=3 uid="uid://khbsfu8osnus"]
 
 [ext_resource type="Script" path="res://scripts/screens/accusation.gd" id="1_hq3lw"]
 [ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="2_5einh"]
 [ext_resource type="Texture2D" uid="uid://dekotuv2ccpvr" path="res://assets/minigames/child/child.png" id="3_2ig72"]
 [ext_resource type="Texture2D" uid="uid://bw4mdwexlhw3q" path="res://assets/minigames/doctor/doctor.png" id="4_pmh1n"]
+[ext_resource type="PackedScene" uid="uid://ckyvoe1dpicpw" path="res://scenes/ui/name_tag.tscn" id="4_vks1t"]
 [ext_resource type="Texture2D" uid="uid://267yj8mmwhh1" path="res://assets/minigames/chef/chef.png" id="5_ngj2i"]
 [ext_resource type="Texture2D" uid="uid://bbnd1yovc3guw" path="res://assets/minigames/computer-scientist/computer-scientist.png" id="6_b11og"]
 
@@ -35,7 +36,7 @@ horizontal_alignment = 1
 
 [node name="TopHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 50
+theme_override_constants/separation = 25
 alignment = 1
 
 [node name="ChildVBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TopHBoxContainer"]
@@ -54,13 +55,9 @@ texture_hover = ExtResource("3_2ig72")
 texture_focused = ExtResource("3_2ig72")
 stretch_mode = 3
 
-[node name="ChildName" type="Label" parent="MarginContainer/VBoxContainer/TopHBoxContainer/ChildVBoxContainer"]
-texture_filter = 3
+[node name="ChildName" parent="MarginContainer/VBoxContainer/TopHBoxContainer/ChildVBoxContainer" instance=ExtResource("4_vks1t")]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_5einh")
-text = "Kite"
-horizontal_alignment = 1
+size_flags_vertical = 2
 
 [node name="DoctorVBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TopHBoxContainer"]
 layout_mode = 2
@@ -78,17 +75,13 @@ texture_hover = ExtResource("4_pmh1n")
 texture_focused = ExtResource("4_pmh1n")
 stretch_mode = 3
 
-[node name="DoctorName" type="Label" parent="MarginContainer/VBoxContainer/TopHBoxContainer/DoctorVBoxContainer"]
-texture_filter = 3
+[node name="DoctorName" parent="MarginContainer/VBoxContainer/TopHBoxContainer/DoctorVBoxContainer" instance=ExtResource("4_vks1t")]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_5einh")
-text = "Dr. Grey"
-horizontal_alignment = 1
+size_flags_vertical = 2
 
 [node name="BottomHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 50
+theme_override_constants/separation = 25
 alignment = 1
 
 [node name="ChefVBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/BottomHBoxContainer"]
@@ -107,13 +100,9 @@ texture_hover = ExtResource("5_ngj2i")
 texture_focused = ExtResource("5_ngj2i")
 stretch_mode = 3
 
-[node name="ChefName" type="Label" parent="MarginContainer/VBoxContainer/BottomHBoxContainer/ChefVBoxContainer"]
-texture_filter = 3
+[node name="ChefName" parent="MarginContainer/VBoxContainer/BottomHBoxContainer/ChefVBoxContainer" instance=ExtResource("4_vks1t")]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_5einh")
-text = "Patrica"
-horizontal_alignment = 1
+size_flags_vertical = 2
 
 [node name="ComputerScientistVBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/BottomHBoxContainer"]
 layout_mode = 2
@@ -131,13 +120,9 @@ texture_hover = ExtResource("6_b11og")
 texture_focused = ExtResource("6_b11og")
 stretch_mode = 3
 
-[node name="ComputerScientistName" type="Label" parent="MarginContainer/VBoxContainer/BottomHBoxContainer/ComputerScientistVBoxContainer"]
-texture_filter = 3
+[node name="ComputerScientistName" parent="MarginContainer/VBoxContainer/BottomHBoxContainer/ComputerScientistVBoxContainer" instance=ExtResource("4_vks1t")]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_5einh")
-text = "Prof. Vanth"
-horizontal_alignment = 1
+size_flags_vertical = 2
 
 [connection signal="button_up" from="MarginContainer/VBoxContainer/TopHBoxContainer/ChildVBoxContainer/ChildButton" to="." method="_on_child_button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/TopHBoxContainer/DoctorVBoxContainer/DoctorButton" to="." method="_on_doctor_button_button_up"]

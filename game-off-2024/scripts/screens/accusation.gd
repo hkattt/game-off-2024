@@ -5,12 +5,20 @@ extends Node2D
 @onready var chef_button: TextureButton      = $MarginContainer/VBoxContainer/BottomHBoxContainer/ChefVBoxContainer/ChefButton
 @onready var scientist_button: TextureButton = $MarginContainer/VBoxContainer/BottomHBoxContainer/ComputerScientistVBoxContainer/CompurterScientistButton
 
+@onready var child_name: Panel     = $MarginContainer/VBoxContainer/TopHBoxContainer/ChildVBoxContainer/ChildName
+@onready var doctor_name: Panel    = $MarginContainer/VBoxContainer/TopHBoxContainer/DoctorVBoxContainer/DoctorName
+@onready var chef_name: Panel      = $MarginContainer/VBoxContainer/BottomHBoxContainer/ChefVBoxContainer/ChefName
+@onready var scientist_name: Panel = $MarginContainer/VBoxContainer/BottomHBoxContainer/ComputerScientistVBoxContainer/ComputerScientistName
+
 const victory_scene: PackedScene = preload("res://scenes/screens/victory.tscn")
 const lose_scene: PackedScene    = preload("res://scenes/screens/lose.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass 
+	child_name.set_character_name("Kite") 
+	doctor_name.set_character_name("Dr. Grey")
+	chef_name.set_character_name("Patrica")
+	scientist_name.set_character_name("Prof. Vanth")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
