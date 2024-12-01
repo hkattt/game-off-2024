@@ -43,4 +43,15 @@ autowrap_mode = 3
 position = Vector2(239, 165)
 scale = Vector2(1.21875, 1.21875)
 
-[node name="MainMenuButton" parent="." instance=ExtResource("4_vla7a")]
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="MainMenuButton" parent="MarginContainer" instance=ExtResource("4_vla7a")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4

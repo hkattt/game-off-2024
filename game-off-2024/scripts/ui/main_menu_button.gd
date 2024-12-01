@@ -1,4 +1,4 @@
-extends Button
+extends TextureButton
 
 const main_menu: PackedScene = preload("res://scenes/screens/start_menu.tscn")
 
