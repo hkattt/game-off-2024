@@ -4,16 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://ymm4eodq0hbq" path="res://assets/minigames/child/ball.png" id="2_uqeoa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w6kwp"]
-radius = 9.0
+radius = 7.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_7d8hc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
-texture_filter = 1
+texture_filter = 3
 position = Vector2(8, -8)
-scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_uqeoa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -1,11 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://cy2wlk25kk4wf"]
+[gd_scene load_steps=7 format=3 uid="uid://cy2wlk25kk4wf"]
 
+[ext_resource type="Script" path="res://scripts/screens/victory_lose.gd" id="1_aodyh"]
 [ext_resource type="Texture2D" uid="uid://y8b50lq2kmdm" path="res://assets/newspaper.png.png" id="2_mo5pc"]
 [ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="2_nvc7u"]
 [ext_resource type="PackedScene" uid="uid://clj2cx15h7sq" path="res://scenes/minigames/doctor/doctor.tscn" id="3_boxpp"]
-[ext_resource type="PackedScene" uid="uid://dj456m2eant0h" path="res://scenes/ui/main_menu_button.tscn" id="4_vla7a"]
+[ext_resource type="Texture2D" uid="uid://dahbudd77qtqv" path="res://assets/ui/next-dark.png" id="4_ay3dx"]
+[ext_resource type="Texture2D" uid="uid://by7pd52umhxjs" path="res://assets/ui/next-light.png" id="5_afvlj"]
 
 [node name="Victory" type="Node2D"]
+script = ExtResource("1_aodyh")
 
 [node name="Newspaper" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -44,14 +47,24 @@ position = Vector2(239, 165)
 scale = Vector2(1.21875, 1.21875)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-theme_override_constants/margin_left = 1
-theme_override_constants/margin_top = 1
-theme_override_constants/margin_right = 1
-theme_override_constants/margin_bottom = 1
-
-[node name="MainMenuButton" parent="MarginContainer" instance=ExtResource("4_vla7a")]
-layout_mode = 2
-size_flags_horizontal = 4
+custom_minimum_size = Vector2(320, 0)
+offset_right = 26.0
+offset_bottom = 26.0
+size_flags_horizontal = 3
 size_flags_vertical = 4
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="NextButton" type="TextureButton" parent="MarginContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 8
+focus_mode = 0
+texture_normal = ExtResource("4_ay3dx")
+texture_pressed = ExtResource("5_afvlj")
+texture_hover = ExtResource("5_afvlj")
+texture_focused = ExtResource("5_afvlj")
+
+[connection signal="button_up" from="MarginContainer/NextButton" to="." method="_on_next_button_button_up"]
