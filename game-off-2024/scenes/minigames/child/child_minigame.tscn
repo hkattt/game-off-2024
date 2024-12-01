@@ -16,8 +16,7 @@ offset_right = 296.0
 offset_bottom = 96.0
 
 [node name="Player" parent="." instance=ExtResource("2_m6exf")]
-z_index = 1
-position = Vector2(8, 80)
+position = Vector2(8, 88)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

@@ -1,18 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://dnx1woj07juxu"]
+[gd_scene load_steps=4 format=3 uid="uid://dnx1woj07juxu"]
 
 [ext_resource type="Script" path="res://scripts/minigames/child/player.gd" id="1_7d8hc"]
+[ext_resource type="Texture2D" uid="uid://ymm4eodq0hbq" path="res://assets/minigames/child/ball.png" id="2_uqeoa"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_igdaw"]
-size = Vector2(16, 16)
+[sub_resource type="CircleShape2D" id="CircleShape2D_w6kwp"]
+radius = 9.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_7d8hc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_igdaw")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(8, -8)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_uqeoa")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 16.0
-offset_bottom = 16.0
-color = Color(0.164706, 0.141176, 0.117647, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, -8)
+shape = SubResource("CircleShape2D_w6kwp")
