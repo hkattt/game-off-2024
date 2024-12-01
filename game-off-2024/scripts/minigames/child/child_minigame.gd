@@ -14,7 +14,7 @@ extends "res://scripts/minigames/minigame.gd"
 var spawn_time_min: float
 var spawn_time_max: float
 # Current timer for the obstacle spawn and finish line spawn
-var spawn_timer: float = 0.0
+var spawn_timer: float = 4.0
 var win_timer: float = 15.0
 
 # Called when the node enters the scene tree for the first time.
@@ -23,8 +23,6 @@ func _ready() -> void:
 		tutorial_text.visible = false
 		
 	set_spawn_rates()
-			
-	spawn_timer = randf_range(spawn_time_min, spawn_time_max) + 1.0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
