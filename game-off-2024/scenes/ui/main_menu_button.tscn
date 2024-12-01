@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dj456m2eant0h"]
+
+[ext_resource type="Texture2D" uid="uid://dc0lafy7qxjv3" path="res://assets/ui/home-dark.png" id="1_myfbl"]
+[ext_resource type="Script" path="res://scripts/ui/main_menu_button.gd" id="2_1phw7"]
+[ext_resource type="Texture2D" uid="uid://ct7spw4umd5vx" path="res://assets/ui/home-light.png" id="2_fj2el"]
+
+[node name="MainMenuButton" type="TextureButton"]
+texture_filter = 3
+offset_right = 16.0
+offset_bottom = 16.0
+focus_mode = 0
+texture_normal = ExtResource("1_myfbl")
+texture_pressed = ExtResource("2_fj2el")
+texture_hover = ExtResource("2_fj2el")
+texture_focused = ExtResource("2_fj2el")
+script = ExtResource("2_1phw7")
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]

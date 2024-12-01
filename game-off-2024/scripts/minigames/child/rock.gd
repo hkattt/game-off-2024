@@ -2,13 +2,11 @@ extends Area2D
 
 
 var minigame: Node2D
-var death_sound: AudioStreamPlayer2D
 
 var speed: float = 200
 
 func _ready() -> void:
 	minigame = get_parent()
-	death_sound = minigame.get_node("DeathSound")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmnyiqyg3g447"]
+
+[ext_resource type="Script" path="res://scripts/screens/story.gd" id="1_ls0p2"]
+[ext_resource type="PackedScene" uid="uid://dxuo3kk60cdkk" path="res://scenes/ui/text_box.tscn" id="2_an1l8"]
+[ext_resource type="PackedScene" uid="uid://ckyvoe1dpicpw" path="res://scenes/ui/name_tag.tscn" id="3_oqjdl"]
+[ext_resource type="PackedScene" uid="uid://c50veuqrn6ufg" path="res://scenes/chief.tscn" id="4_lqfed"]
+[ext_resource type="Texture2D" uid="uid://by7pd52umhxjs" path="res://assets/ui/next-light.png" id="5_bqhul"]
+[ext_resource type="Texture2D" uid="uid://dahbudd77qtqv" path="res://assets/ui/next-dark.png" id="5_q65w2"]
+
+[node name="Story" type="Node2D"]
+script = ExtResource("1_ls0p2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 120.0
+offset_bottom = 179.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ChiefMarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 45
+
+[node name="ChiefVBoxContainer" type="VBoxContainer" parent="VBoxContainer/ChiefMarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/separation = 40
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/ChiefMarginContainer/ChiefVBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="Chief" parent="VBoxContainer/ChiefMarginContainer/ChiefVBoxContainer/CenterContainer" instance=ExtResource("4_lqfed")]
+
+[node name="ChiefName" parent="VBoxContainer/ChiefMarginContainer/ChiefVBoxContainer" instance=ExtResource("3_oqjdl")]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="TextBoxMarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextBox" parent="VBoxContainer/TextBoxMarginContainer" instance=ExtResource("2_an1l8")]
+custom_minimum_size = Vector2(300, 120)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TextBoxMarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="NextButton" type="TextureButton" parent="VBoxContainer/TextBoxMarginContainer/MarginContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("5_q65w2")
+texture_pressed = ExtResource("5_bqhul")
+texture_hover = ExtResource("5_bqhul")
+texture_focused = ExtResource("5_bqhul")
+
+[connection signal="button_up" from="VBoxContainer/TextBoxMarginContainer/MarginContainer/NextButton" to="." method="_on_next_button_button_up"]

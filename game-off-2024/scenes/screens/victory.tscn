@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://cy2wlk25kk4wf"]
+
+[ext_resource type="Texture2D" uid="uid://y8b50lq2kmdm" path="res://assets/newspaper.png.png" id="2_mo5pc"]
+[ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="2_nvc7u"]
+[ext_resource type="PackedScene" uid="uid://clj2cx15h7sq" path="res://scenes/minigames/doctor/doctor.tscn" id="3_boxpp"]
+[ext_resource type="PackedScene" uid="uid://dj456m2eant0h" path="res://scenes/ui/main_menu_button.tscn" id="4_vla7a"]
+
+[node name="Victory" type="Node2D"]
+
+[node name="Newspaper" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(160, 121)
+texture = ExtResource("2_mo5pc")
+
+[node name="BreakingNews" type="Label" parent="."]
+texture_filter = 3
+custom_minimum_size = Vector2(50, 50)
+offset_left = 61.0
+offset_top = 73.0
+offset_right = 253.0
+offset_bottom = 123.0
+theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_fonts/font = ExtResource("2_nvc7u")
+theme_override_font_sizes/font_size = 32
+text = "BREAKING NEWS"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Description" type="Label" parent="."]
+texture_filter = 3
+custom_minimum_size = Vector2(50, 50)
+offset_left = 62.0
+offset_top = 137.0
+offset_right = 186.0
+offset_bottom = 219.0
+theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_fonts/font = ExtResource("2_nvc7u")
+theme_override_font_sizes/font_size = 16
+text = "Dr. Grey was found guilty of poisoning his wife in a jealous rage following an affair."
+autowrap_mode = 3
+
+[node name="Doctor" parent="." instance=ExtResource("3_boxpp")]
+position = Vector2(239, 165)
+scale = Vector2(1.21875, 1.21875)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="MainMenuButton" parent="MarginContainer" instance=ExtResource("4_vla7a")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4

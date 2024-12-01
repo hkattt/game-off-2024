@@ -1,5 +1,7 @@
 extends "res://scripts/minigames/minigame.gd"
 
+@onready var tutorial_text: Label = $TutorialText
+
 @onready var chicken_scene: PackedScene   = preload("res://scenes/minigames/chef/chicken.tscn")
 @onready var coffee_scene: PackedScene    = preload("res://scenes/minigames/chef/coffee.tscn")
 @onready var croissant_scene: PackedScene = preload("res://scenes/minigames/chef/croissant.tscn")
@@ -22,13 +24,17 @@ var food_spawn_rate: float
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if level != Level.EASY:
+		tutorial_text.visible = false
+		
 	set_spawn_rate()
 	food_timer = food_spawn_rate
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	food_timer -= delta 
-	win_timer  -= delta
+	if !tutorial_text.visible:
+		food_timer -= delta 
+		win_timer  -= delta
 	
 	if food_timer <= 0 && win_timer > 2:
 		spawn_food()

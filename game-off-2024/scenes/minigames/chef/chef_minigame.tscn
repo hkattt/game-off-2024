@@ -1,12 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bx6i6tuijba7m"]
+[gd_scene load_steps=5 format=3 uid="uid://bx6i6tuijba7m"]
 
 [ext_resource type="Script" path="res://scripts/minigames/chef/chef_minigame.gd" id="1_qopp5"]
 [ext_resource type="PackedScene" uid="uid://dgb6lcmj4ea7m" path="res://scenes/minigames/chef/basket.tscn" id="2_qiiy0"]
+[ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="3_q4cbp"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ljk2e"]
 b = Vector2(0, 96)
 
-[node name="ChildMinigame" type="Node2D"]
+[node name="ChefMinigame" type="Node2D"]
 script = ExtResource("1_qopp5")
 
 [node name="Window" type="ColorRect" parent="."]
@@ -16,7 +17,7 @@ offset_bottom = 96.0
 
 [node name="Basket" parent="." instance=ExtResource("2_qiiy0")]
 z_index = 1
-position = Vector2(128, 80)
+position = Vector2(149, 89)
 
 [node name="LeftWall" type="StaticBody2D" parent="."]
 
@@ -28,3 +29,13 @@ position = Vector2(296, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
 shape = SubResource("SegmentShape2D_ljk2e")
+
+[node name="TutorialText" type="Label" parent="."]
+texture_filter = 3
+offset_right = 296.0
+offset_bottom = 96.0
+theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_fonts/font = ExtResource("3_q4cbp")
+text = "Use A and D to move and catch food"
+horizontal_alignment = 1
+vertical_alignment = 1

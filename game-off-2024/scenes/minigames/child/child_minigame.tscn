@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5dhq6hane33t"]
+[gd_scene load_steps=5 format=3 uid="uid://c5dhq6hane33t"]
 
 [ext_resource type="Script" path="res://scripts/minigames/child/child_minigame.gd" id="1_oa7m1"]
 [ext_resource type="PackedScene" uid="uid://dnx1woj07juxu" path="res://scenes/minigames/child/player.tscn" id="2_m6exf"]
+[ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="3_wx4q4"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_r17oc"]
 b = Vector2(320, 0)
@@ -24,3 +25,13 @@ position = Vector2(8, 80)
 position = Vector2(0, 96)
 shape = SubResource("SegmentShape2D_r17oc")
 debug_color = Color(0.868697, 0.217806, 0.689677, 0.42)
+
+[node name="TutorialText" type="Label" parent="."]
+texture_filter = 3
+offset_right = 296.0
+offset_bottom = 96.0
+theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_fonts/font = ExtResource("3_wx4q4")
+text = "Use SPACE to jump over obstacles"
+horizontal_alignment = 1
+vertical_alignment = 1

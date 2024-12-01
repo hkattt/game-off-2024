@@ -8,9 +8,6 @@ extends "res://scripts/minigames/minigame.gd"
 @onready var diagnosis2: Button = $"MarginContainer/VBoxContainer/DiagnosisHBoxContainer/Diagnosis 2"
 @onready var diagnosis3: Button = $"MarginContainer/VBoxContainer/DiagnosisHBoxContainer/Diagnosis 3"
 
-@onready var correct_sound: AudioStreamPlayer2D = $CorrectSound
-@onready var wrong_sound: AudioStreamPlayer2D   = $WrongSound
-
 var diagnostic_challenges: Array = []
 var correct_diagnosis: String
 var challenge_index: int

@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://ck5id71nprqt3"]
+[gd_scene load_steps=5 format=3 uid="uid://mg1grb8t25fv"]
 
-[ext_resource type="Script" path="res://scripts/minigames/doctor/doctor_minigame.gd" id="1_2q7ea"]
-[ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="2_7bcpl"]
+[ext_resource type="Script" path="res://scripts/minigames/computer-scientist/computer_scientist_minigame.gd" id="1_mplkp"]
+[ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="2_tu55l"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0u0n"]
 bg_color = Color(0.741176, 0.647059, 0.513726, 1)
@@ -35,8 +35,8 @@ expand_margin_top = 1.0
 expand_margin_right = 1.0
 expand_margin_bottom = 1.0
 
-[node name="DoctorMinigame" type="Node2D"]
-script = ExtResource("1_2q7ea")
+[node name="ComputerScientistMinigame" type="Node2D"]
+script = ExtResource("1_mplkp")
 
 [node name="Window" type="ColorRect" parent="."]
 visible = false
@@ -57,54 +57,75 @@ size_flags_vertical = 0
 theme_override_constants/separation = 8
 alignment = 1
 
-[node name="Symptoms" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Pattern" type="Label" parent="MarginContainer/VBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_7bcpl")
-text = "Symptoms"
+theme_override_fonts/font = ExtResource("2_tu55l")
+text = "Pattern"
 horizontal_alignment = 1
 
-[node name="SymptomHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="SequenceHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Symptom 1" type="Label" parent="MarginContainer/VBoxContainer/SymptomHBoxContainer"]
+[node name="Element 1" type="Label" parent="MarginContainer/VBoxContainer/SequenceHBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_7bcpl")
-text = "Symptom 1"
+theme_override_fonts/font = ExtResource("2_tu55l")
+text = "1"
 
-[node name="Symptom 2" type="Label" parent="MarginContainer/VBoxContainer/SymptomHBoxContainer"]
+[node name="Element 2" type="Label" parent="MarginContainer/VBoxContainer/SequenceHBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_7bcpl")
-text = "Symptom 2"
+theme_override_fonts/font = ExtResource("2_tu55l")
+text = "2"
 
-[node name="Symptom 3" type="Label" parent="MarginContainer/VBoxContainer/SymptomHBoxContainer"]
+[node name="Element 3" type="Label" parent="MarginContainer/VBoxContainer/SequenceHBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_7bcpl")
-text = "Symptom 3"
+theme_override_fonts/font = ExtResource("2_tu55l")
+text = "3"
 
-[node name="Diagnoses" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Element 4" type="Label" parent="MarginContainer/VBoxContainer/SequenceHBoxContainer"]
 texture_filter = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_7bcpl")
-text = "Diagnoses"
+theme_override_fonts/font = ExtResource("2_tu55l")
+text = "4"
+
+[node name="Element 5" type="Label" parent="MarginContainer/VBoxContainer/SequenceHBoxContainer"]
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_fonts/font = ExtResource("2_tu55l")
+text = "5"
+
+[node name="Element 6" type="Label" parent="MarginContainer/VBoxContainer/SequenceHBoxContainer"]
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_fonts/font = ExtResource("2_tu55l")
+text = "6"
+
+[node name="MissingElement" type="Label" parent="MarginContainer/VBoxContainer"]
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
+theme_override_fonts/font = ExtResource("2_tu55l")
+text = "Missing Element "
 horizontal_alignment = 1
 
-[node name="DiagnosisHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="MissingHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Diagnosis 1" type="Button" parent="MarginContainer/VBoxContainer/DiagnosisHBoxContainer"]
+[node name="MissingElement 1" type="Button" parent="MarginContainer/VBoxContainer/MissingHBoxContainer"]
 texture_filter = 3
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
@@ -114,7 +135,7 @@ theme_override_colors/font_hover_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_focus_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_7bcpl")
+theme_override_fonts/font = ExtResource("2_tu55l")
 theme_override_styles/focus = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_e0u0n")
@@ -123,10 +144,9 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/normal = SubResource("StyleBoxFlat_54iay")
-text = "Diagnosis 1
-"
+text = "Missing 1"
 
-[node name="Diagnosis 2" type="Button" parent="MarginContainer/VBoxContainer/DiagnosisHBoxContainer"]
+[node name="MissingElement 2" type="Button" parent="MarginContainer/VBoxContainer/MissingHBoxContainer"]
 texture_filter = 3
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
@@ -136,7 +156,7 @@ theme_override_colors/font_hover_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_focus_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_7bcpl")
+theme_override_fonts/font = ExtResource("2_tu55l")
 theme_override_styles/focus = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_e0u0n")
@@ -145,10 +165,9 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/normal = SubResource("StyleBoxFlat_54iay")
-text = "Diagnosis 2
-"
+text = "Missing 2"
 
-[node name="Diagnosis 3" type="Button" parent="MarginContainer/VBoxContainer/DiagnosisHBoxContainer"]
+[node name="MissingElement 3" type="Button" parent="MarginContainer/VBoxContainer/MissingHBoxContainer"]
 texture_filter = 3
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
@@ -158,7 +177,7 @@ theme_override_colors/font_hover_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_focus_color = Color(0.164706, 0.141176, 0.117647, 1)
 theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("2_7bcpl")
+theme_override_fonts/font = ExtResource("2_tu55l")
 theme_override_styles/focus = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_e0u0n")
@@ -167,9 +186,8 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_e0u0n")
 theme_override_styles/normal = SubResource("StyleBoxFlat_54iay")
-text = "Diagnosis 3
-"
+text = "Missing 3"
 
-[connection signal="button_up" from="MarginContainer/VBoxContainer/DiagnosisHBoxContainer/Diagnosis 1" to="." method="_on_diagnosis_1_button_up"]
-[connection signal="button_up" from="MarginContainer/VBoxContainer/DiagnosisHBoxContainer/Diagnosis 2" to="." method="_on_diagnosis_2_button_up"]
-[connection signal="button_up" from="MarginContainer/VBoxContainer/DiagnosisHBoxContainer/Diagnosis 3" to="." method="_on_diagnosis_3_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/MissingHBoxContainer/MissingElement 1" to="." method="_on_next_element_1_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/MissingHBoxContainer/MissingElement 2" to="." method="_on_next_element_2_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/MissingHBoxContainer/MissingElement 3" to="." method="_on_next_element_3_button_up"]

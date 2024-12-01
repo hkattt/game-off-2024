@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c50veuqrn6ufg"]
+
+[ext_resource type="Texture2D" uid="uid://dtjhknaf21m3p" path="res://assets/chief.png" id="1_6c7cm"]
+
+[node name="Chief" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_6c7cm")

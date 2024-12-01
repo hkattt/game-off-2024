@@ -11,14 +11,15 @@ config_version=5
 [application]
 
 config/name="game-off-2024"
-run/main_scene="res://scenes/start_menu.tscn"
+run/main_scene="res://scenes/screens/start_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-SoundManager="*res://scenes/sound_manager.tscn"
-MusicManager="*res://scenes/music_manager.tscn"
+SoundManager="*res://scenes/managers/sound_manager.tscn"
+MusicManager="*res://scenes/managers/music_manager.tscn"
+FadeWindow="*res://scenes/ui/fade_window.tscn"
 
 [display]
 

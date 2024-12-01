@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckyvoe1dpicpw"]
+
+[ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="1_8p12o"]
+[ext_resource type="Script" path="res://scripts/ui/name_tag.gd" id="1_o4w3q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vbnwk"]
+bg_color = Color(0.317647, 0.286275, 0.211765, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.164706, 0.141176, 0.117647, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="NameTag" type="Panel"]
+texture_filter = 1
+custom_minimum_size = Vector2(100, 15)
+offset_right = 100.0
+offset_bottom = 15.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vbnwk")
+script = ExtResource("1_o4w3q")
+
+[node name="CharacterName" type="Label" parent="."]
+texture_filter = 3
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(0.803922, 0.72549, 0.580392, 1)
+theme_override_fonts/font = ExtResource("1_8p12o")
+text = "Character Name"
+horizontal_alignment = 1
+vertical_alignment = 1
