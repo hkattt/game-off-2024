@@ -5,6 +5,8 @@ Interrogation was made using Godot 4 and GDScript for [GitHub Game Off 2024](htt
 
 Interrogation is a murder mystery game where you question suspects and piece together the truth to solve a crime.
 
+Interrogation can be played here: https://hkattt.itch.io/interrogation 
+
 ## Dependencies
 
 The only dependency is the [Godot 4 game engine](https://godotengine.org/). 
