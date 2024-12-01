@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bkuawgwjjdb8y"]
 
 [ext_resource type="Script" path="res://scripts/minigames/child/finish_line.gd" id="1_m2oud"]
-[ext_resource type="Texture2D" uid="uid://dxp5affguwae1" path="res://assets/minigames/child/finishline.png" id="2_hwt8g"]
+[ext_resource type="Texture2D" uid="uid://c1l8hn845jxcg" path="res://assets/minigames/child/goal.png" id="2_qwncj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yd5gx"]
 size = Vector2(3, 100)
@@ -11,11 +11,11 @@ script = ExtResource("1_m2oud")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 3
-position = Vector2(0, 50)
-texture = ExtResource("2_hwt8g")
+position = Vector2(-16, 76)
+texture = ExtResource("2_qwncj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 50)
+position = Vector2(0, 48)
 shape = SubResource("RectangleShape2D_yd5gx")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
