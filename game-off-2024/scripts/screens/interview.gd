@@ -22,8 +22,6 @@ func _ready() -> void:
 	text_box.set_text(dialogue_manager.get_opening_line())
 	instantiate_character()
 	instantiate_minigame(level)
-	# Sleep for 5 seconds
-	await get_tree().create_timer(5).timeout
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -46,10 +44,10 @@ func _process(delta: float) -> void:
 			minigame.free()
 			# Move to the next level
 			level = Minigame.next_level(level)
+			
 			# Check if all the levels have been played
 			if level == Minigame.Level.COMPLETE:
-				# Sleep for 5 seconds
-				await get_tree().create_timer(5).timeout
+				await get_tree().create_timer(10).timeout
 				interview_finished.emit()
 			else:	
 				# Instantiate the next level

@@ -61,6 +61,7 @@ theme_override_constants/margin_bottom = 5
 [node name="NextButton" type="TextureButton" parent="VBoxContainer/TextBoxMarginContainer/MarginContainer"]
 texture_filter = 1
 layout_mode = 2
+focus_mode = 0
 texture_normal = ExtResource("5_q65w2")
 texture_pressed = ExtResource("5_bqhul")
 texture_hover = ExtResource("5_bqhul")
