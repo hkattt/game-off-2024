@@ -1,13 +1,9 @@
 # Interrogation
 
-**TODO**: Update reposity name, description
-
 ## Overview 
 Interrogation was made using Godot 4 and GDScript for [GitHub Game Off 2024](https://itch.io/jam/game-off-2024). The theme of the game jam was was `SECRETS`. We **almost** followed the `SMALL PALETTE` wildcard, using a colour palette with 6 colours. 
 
 Interrogation is a murder mystery game where you question suspects and piece together the truth to solve a crime.
-
-**TODO**: Provide a description of the game with some screenshots or videos.
 
 ## Dependencies
 
@@ -16,8 +12,6 @@ The only dependency is the [Godot 4 game engine](https://godotengine.org/).
 ## Setup the Project Locally
 
 To setup the project locally, simply clone the repository and open the project in Godot. 
-
-**TODO**: Explain how to setup the project.
 
 ## Asset References
 - **pentacom**. Game font. Retrieved from: https://www.pentacom.jp/pentacom/bitfontmaker2/gallery/?id=381
