@@ -2,75 +2,68 @@
 
 [ext_resource type="Script" path="res://scripts/screens/story.gd" id="1_ls0p2"]
 [ext_resource type="PackedScene" uid="uid://dxuo3kk60cdkk" path="res://scenes/ui/text_box.tscn" id="2_an1l8"]
-[ext_resource type="FontFile" uid="uid://dq4pyxfiswi2f" path="res://assets/font/HelvetiPixel.ttf" id="3_w8y6o"]
+[ext_resource type="PackedScene" uid="uid://ckyvoe1dpicpw" path="res://scenes/ui/name_tag.tscn" id="3_oqjdl"]
 [ext_resource type="PackedScene" uid="uid://c50veuqrn6ufg" path="res://scenes/chief.tscn" id="4_lqfed"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsic3"]
-bg_color = Color(0.741176, 0.647059, 0.513726, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.164706, 0.141176, 0.117647, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-expand_margin_left = 1.0
-expand_margin_top = 1.0
-expand_margin_right = 1.0
-expand_margin_bottom = 1.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qir4h"]
-bg_color = Color(0.803922, 0.72549, 0.580392, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.164706, 0.141176, 0.117647, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-expand_margin_left = 1.0
-expand_margin_top = 1.0
-expand_margin_right = 1.0
-expand_margin_bottom = 1.0
+[ext_resource type="Texture2D" uid="uid://by7pd52umhxjs" path="res://assets/ui/next-light.png" id="5_bqhul"]
+[ext_resource type="Texture2D" uid="uid://dahbudd77qtqv" path="res://assets/ui/next-dark.png" id="5_q65w2"]
 
 [node name="Story" type="Node2D"]
 script = ExtResource("1_ls0p2")
 
-[node name="NextButton" type="Button" parent="."]
-texture_filter = 3
-custom_minimum_size = Vector2(75, 0)
-offset_left = 239.0
-offset_top = 218.0
-offset_right = 314.0
-offset_bottom = 234.0
-focus_mode = 0
-theme_override_colors/font_hover_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_colors/font_hover_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_colors/font_pressed_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_colors/font_focus_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_colors/font_color = Color(0.164706, 0.141176, 0.117647, 1)
-theme_override_fonts/font = ExtResource("3_w8y6o")
-theme_override_styles/focus = SubResource("StyleBoxFlat_wsic3")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_wsic3")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_wsic3")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_wsic3")
-theme_override_styles/hover = SubResource("StyleBoxFlat_wsic3")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_wsic3")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_wsic3")
-theme_override_styles/normal = SubResource("StyleBoxFlat_qir4h")
-text = "Next"
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 120.0
+offset_bottom = 179.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="TextBox" parent="." instance=ExtResource("2_an1l8")]
-offset_left = 115.0
-offset_top = 40.0
-offset_right = 319.0
-offset_bottom = 180.0
+[node name="ChiefMarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 45
 
-[node name="Chief" parent="." instance=ExtResource("4_lqfed")]
-position = Vector2(57, 109)
+[node name="ChiefVBoxContainer" type="VBoxContainer" parent="VBoxContainer/ChiefMarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/separation = 40
 
-[connection signal="button_up" from="NextButton" to="." method="_on_next_button_button_up"]
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/ChiefMarginContainer/ChiefVBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="Chief" parent="VBoxContainer/ChiefMarginContainer/ChiefVBoxContainer/CenterContainer" instance=ExtResource("4_lqfed")]
+
+[node name="ChiefName" parent="VBoxContainer/ChiefMarginContainer/ChiefVBoxContainer" instance=ExtResource("3_oqjdl")]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="TextBoxMarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextBox" parent="VBoxContainer/TextBoxMarginContainer" instance=ExtResource("2_an1l8")]
+custom_minimum_size = Vector2(300, 120)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TextBoxMarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="NextButton" type="TextureButton" parent="VBoxContainer/TextBoxMarginContainer/MarginContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("5_q65w2")
+texture_pressed = ExtResource("5_bqhul")
+texture_hover = ExtResource("5_bqhul")
+texture_focused = ExtResource("5_bqhul")
+
+[connection signal="button_up" from="VBoxContainer/TextBoxMarginContainer/MarginContainer/NextButton" to="." method="_on_next_button_button_up"]

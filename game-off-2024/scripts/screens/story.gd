@@ -1,6 +1,7 @@
 extends Node2D
 
-@onready var text_box: MarginContainer = $TextBox
+@onready var text_box: MarginContainer = $VBoxContainer/TextBoxMarginContainer/TextBox
+@onready var chief_name: Panel         = $VBoxContainer/ChiefMarginContainer/ChiefVBoxContainer/ChiefName
 
 const game_scene: PackedScene = preload("res://scenes/screens/game.tscn")
 
@@ -10,6 +11,7 @@ var line_index = 0
 func _ready() -> void:
 	load_story("res://assets/story-introduction.json") 
 	text_box.set_text(story_lines[line_index])
+	chief_name.set_character_name("Chief. Fernando")
 	
 func load_story(file_path: String) -> void:
 	if FileAccess.file_exists(file_path):
