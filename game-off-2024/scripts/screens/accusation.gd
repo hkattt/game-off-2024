@@ -46,7 +46,7 @@ func _on_scientist_button_button_up() -> void:
 	switch_scene(lose_scene)
 	
 func switch_scene(scene: PackedScene) -> void:
+	SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)
 	await FadeWindow.fade_out()
 	get_tree().change_scene_to_packed(scene)
 	await FadeWindow.fade_in()
-	SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)
