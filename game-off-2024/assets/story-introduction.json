@@ -1,11 +1,12 @@
 {
+    "name": "Chief. Fernando",
     "story": [
-        "Detective, we've got a situation. Ms. Grey is dead with no signs of a struggle.",
-        "Four people were close to her, but one of them is hiding something.",
-        "There's Kite, the kid who found her body.", 
-        "Dr. Grey, her husband and our top doctor.",
-        "Patricia, the chef she often visited.",
-        "And Professor Vanth, the prodigy scientist said to be close to her.",
-        "We need answers before this case goes cold."
+        "Thank you for coming in on such short notice, Detective. We've got a situation. Last night, Ms. Grey was found dead with no signs of a struggle.",
+        "We have identified and brought in four people who were close to her. I'm convinced one of them is hiding something.",
+        "First, there's Kite - the young boy who found and reported the body. It's hard to imagine a kid committing such a crime, but we can't rule anyone out.",
+        "Next, we have Dr. Grey, her husband and the county's top doctor. By all accounts, he's a good man, and it's tragic he's caught up in this.",
+        "Then there's Patricia, the owner and head chef of a popular Italian restaurant that Ms. Grey loved. She and Ms. Grey were close friends.",
+        "Finally, Professor Vanth, a brilliant young computer scientist who recently moved here. He and Ms. Grey became friends quickly - an impressive mind, but who knows what secrets he might have.",
+        "We need answers before this trail goes cold. Interview each suspect and figure out what really happened last night."
     ]
 }
