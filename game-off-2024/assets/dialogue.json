@@ -2,63 +2,59 @@
     "dialogues": [
         {
             "character": "Kite",
-            "opening": "H-h-h-ello detective. Do you mind if we play a game?",
+            "opening": "H-h-h-ello, detective. Do you want to play a game?",
             "positive": [
                 "S-s-sometimes, I heard screaming coming from Ms. Grey's house.",
-                "Professor Vanth helped Ms. Grey buy her groceries when Dr. Grey was working.",
+                "Professor Vanth helped Ms. Grey buy her groceries while Dr. Grey was working.",
                 "I-I-I don't think Dr. Grey liked Professor Vanth. I am not sure why, he is amazing - he fixed my computer."
             ],
             "negative": [
-                "I'm surprised an adult like you could not jump over that.",
+                "AHAHAHA detective, even I could get that one!",
                 "AHAHAHA that one was pretty hard.",
-                "Okay sorry, maybe we should have slowed down."
-            ],
-            "closing": "Closing line"
+                "Sorry, maybe we should have slowed down."
+            ]
         },
         {
             "character": "Dr. Grey", 
-            "opening": "Good evening detective. Surely you can do these simple diagnoses?",
+            "opening": "Good evening detective. Surely you can handle a simple diagnosis?",
             "positive": [
-                "Last night, me and my wife were at Patrica's, before it happened.",
-                "These past few months, have been difficult for me to say the least.",
-                "What is so great about that snarky bastard Professor Vanth anyways?"
+                "I was w-w-working the late shift last night. The police told me she was murdered",
+                "I always worked hard, but she never appreciated it. She never understood.",
+                "Don't get me started on Vanth! He's arrogant, with no real experience. What does anyone see in him?"
             ],
             "negative": [
-                "Are you serious? My dog could have diagnosed that.",
-                "It seems I greatly overestimated your intelligence.",
-                "Your utter incompetence astounds me detective."
-            ],
-            "closing": "Closing line"
+                "You're here to solve my wife's murder? Even my dog could've done that.",
+                "I clearly overestimated your intelligence.",
+                "Your incompetence is astounding, detective."
+            ]
         },
         {
             "character": "Patrica",
-            "opening": "Hello detective. Show me you know how to handle yourself.",
+            "opening": "Hello detective. Find Ms. Grey's killer. Show me you are capable.",
             "positive": [
-                "I have not seen Dr. Grey in months. He is a busy man afterall.",
-                "I frequently served Ms. Grey and Professor Vanth.",
-                "Last night, Ms. Grey and Professor Vanth drank more than usual. It was disgusting."
+                "Ms. Grey stopped bringing Dr. Grey to my restaurant months ago. He's too busy, I guess.",
+                "But she was often with Professor Vanth - he's younger.",
+                "They were drinking together for hours last night. It was... uncomfortable."
             ],
             "negative": [
-                "Common detective, even Kite is more useful than that.",
-                "You do realise food is not meant to be on the floor?",
-                "Please clean up after yourself detective."
-            ],
-            "closing": "Closing line"
+                "Come on, detective. Even my apprentices can do that.",
+                "Food isn't supposed to be on the floor, detective.",
+                "Please clean up after yourself."
+            ]
         },
         {
             "character": "Prof. Vanth",
-            "opening": "As a detective, I am sure these logic puzzles will be easy for you?",
+            "opening": "I trust these puzzles will be easy for you, detective?",
             "positive": [
-                "Last night, I was celebrating a recent publication with Ms. Grey.",
-                "I-I will miss having her company, she was an amazing woman.",
-                "Dr. Grey never treated her right, she always felt neglected by him. "
+                "I was with Ms. Grey last night, before she was murdered. We were celebrating my latest publication.",
+                "S-s-she was a remarkable woman. I'll miss her.",
+                "Dr. Grey was always busy. Ms. Grey hardly saw him. He should've treated her better."
             ],
             "negative": [
-                "That was rather trivial. Are you feeling okay detective?",
-                "Seriously detective, your logical deduction skills are lacking.",
-                "Are you sure you can handle this line of work detective?"
-            ],
-            "closing": "Closing line"
+                "That was trivial. Are you feeling okay, detective?",
+                "Your deduction skills are lacking",
+                "Are you sure you’re cut out for this work?"
+            ]
         }
     ]
 }

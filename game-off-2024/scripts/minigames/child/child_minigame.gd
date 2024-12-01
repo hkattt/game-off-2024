@@ -24,7 +24,7 @@ func _ready() -> void:
 		
 	set_spawn_rates()
 			
-	spawn_timer = randf_range(spawn_time_min, spawn_time_max) + 3.0
+	spawn_timer = randf_range(spawn_time_min, spawn_time_max) + 1.0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
