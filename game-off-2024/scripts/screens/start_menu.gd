@@ -1,6 +1,7 @@
 extends Node2D
 
-const story_scene_path: String = "res://scenes/screens/story.tscn"
+const story_scene_path: String  = "res://scenes/screens/story.tscn"
+const credit_scene_path: String = "res://scenes/screens/credits.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,3 +14,9 @@ func _process(delta: float) -> void:
 		await FadeWindow.fade_out()
 		get_tree().change_scene_to_file(story_scene_path)
 		await FadeWindow.fade_in()
+
+func _on_credits_button_button_up() -> void:
+	SoundManager.play_sound(SoundManager.Sound.CLICK, 20.0)
+	await FadeWindow.fade_out()
+	get_tree().change_scene_to_file(credit_scene_path)
+	await FadeWindow.fade_in()
