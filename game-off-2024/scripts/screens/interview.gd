@@ -46,6 +46,7 @@ func _process(delta: float) -> void:
 			minigame.free()
 			# Move to the next level
 			level = Minigame.next_level(level)
+			
 			# Check if all the levels have been played
 			if level == Minigame.Level.COMPLETE:
 				# Sleep for 5 seconds

@@ -4,9 +4,9 @@
             "character": "Kite",
             "opening": "H-h-h-ello detective. Do you mind if we play a game?",
             "positive": [
-                "Sometimes, I heard shouting coming from the Grey house.",
-                "Last night, I found Ms. Grey passed out with a glass in her hand.",
-                "Professor Vanth helped Ms. Grey with her groceries."
+                "S-s-sometimes, I heard screaming coming from Ms. Grey's house.",
+                "Professor Vanth helped Ms. Grey buy her groceries when Dr. Grey was working.",
+                "I-I-I don't think Dr. Grey liked Professor Vanth. I am not sure why, he is amazing - he fixed my computer."
             ],
             "negative": [
                 "I'm surprised an adult like you could not jump over that.",
@@ -16,7 +16,7 @@
             "closing": "Closing line"
         },
         {
-            "character": "Dr. Grey",
+            "character": "Dr. Grey", 
             "opening": "Good evening detective. Surely you can do these simple diagnoses?",
             "positive": [
                 "Last night, me and my wife were at Patrica's, before it happened.",
