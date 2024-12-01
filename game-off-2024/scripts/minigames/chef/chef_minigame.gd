@@ -19,7 +19,7 @@ extends "res://scripts/minigames/minigame.gd"
 ]
 
 var win_timer: float = 20.0
-var food_timer: float
+var food_timer: float = 5.0
 var food_spawn_rate: float
 
 # Called when the node enters the scene tree for the first time.
@@ -28,7 +28,6 @@ func _ready() -> void:
 		tutorial_text.visible = false
 		
 	set_spawn_rate()
-	food_timer = food_spawn_rate
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
