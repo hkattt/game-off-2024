@@ -25,6 +25,7 @@ To setup the project locally, simply clone the repository and open the project i
 - **greenwwbeetle**. Pop jump SFX. Retrieved from: https://freesound.org/people/greenvwbeetle/sounds/244657/
 - **LiamG_SFX**. Death SFX. Retrieved from: https://freesound.org/people/LiamG_SFX/sounds/322497/
 - **Jaszunio15**. Click SFX. Retrieved from: https://freesound.org/people/Jaszunio15/sounds/421390/
+- **greenvwbeetle**. Wrong SFX. Retrieved from: https://freesound.org/people/greenvwbeetle/sounds/328119/
 - **theplax**. Crunch SFX. Retrieved from: https://freesound.org/people/theplax/sounds/608645/
 
 ## Code References
