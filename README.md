@@ -7,6 +7,12 @@ Interrogation is a murder mystery game where you question suspects and piece tog
 
 Interrogation can be played here: https://hkattt.itch.io/interrogation 
 
+<img src="assets/child-minigame.png" alt="Child Minigame" width="320" height="240"/>
+<img src="assets/doctor-minigame.png" alt="Doctor Minigame" width="320" height="240"/>
+<img src="assets/chef-minigame.png" alt="Chef Minigame" width="320" height="240"/>
+<img src="assets/scientist-minigame.png" alt="Scientist Minigame" width="320" height="240"/>
+<img src="assets/choose.png" alt="Choose" width="320" height="240"/>
+
 ## Dependencies
 
 The only dependency is the [Godot 4 game engine](https://godotengine.org/). 
